@@ -1,4 +1,5 @@
 const Copper01 = require('../models/copper01Model')
+const mongoose = require('mongoose')
 
 
 const getCopper01s = async (req, res) => {
@@ -9,6 +10,10 @@ const getCopper01s = async (req, res) => {
 
 const getCopper01 = async (req, res) => {
     const { id } = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({error: 'no such anode'})
+    }
 
     const copper01 = await Copper01.findById(id)
 
@@ -32,4 +37,38 @@ const createCopper01 = async (req, res) => {
     }
 }
 
-module.exports = { getCopper01s, getCopper01, createCopper01 }
+const deleteCopper01 = async (req, res) => {
+    const {id} = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({error: 'no such anode'})
+    }
+
+    const copper01 = await Copper01.findOneAndDelete({_id: id})
+
+    if(!copper01) {
+        return res.status(404).json({error: 'no such anode'})
+    }
+
+    res.status(200).json(copper01)
+}
+
+const updateCopper01 = async (req, res) => {
+    const {id} = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({error: 'no such anode'})
+    }
+
+    const copper01 = await Copper01.findOneAndUpdate({_id: id}, {
+        ...req.body
+    })
+
+    if(!copper01) {
+        return res.status(404).json({error: 'no such anode'})
+    }
+
+    res.status(200).json(copper01)
+}
+
+module.exports = { getCopper01s, getCopper01, createCopper01, deleteCopper01, updateCopper01 }
