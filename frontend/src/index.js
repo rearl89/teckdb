@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { AnodeContextProvider } from './context/AnodeContext';
+import { Copper01ContextProvider } from './context/Copper01Context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AnodeContextProvider>
+    <Copper01ContextProvider>
       <App />
-    </AnodeContextProvider>
+    </Copper01ContextProvider>
   </React.StrictMode>
 );

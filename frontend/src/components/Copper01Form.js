@@ -1,6 +1,9 @@
 import { useState } from "react"
+import { useCopper01Context } from "../hooks/useCopper01Context"
 
 const Copper01Form = () => {
+    const { dispatch } = useCopper01Context()
+
     const [batchID, setBatchID] = useState('')
     const [set, setSet] = useState('')
     const [postPass, setPostPass] = useState('')
@@ -78,7 +81,8 @@ const Copper01Form = () => {
             setRng4od3('')
             setRng4od4('')
             setError(null)
-            console.log('new anode added')
+            console.log('new anode added', json)
+            dispatch({type: 'CREATE_COPPER01', payload: json})
         }
     }
 
@@ -173,7 +177,7 @@ const Copper01Form = () => {
             <input type ="number" onChange={(e) => setRng4od4(e.target.value)} value={rng4od4} />
 
             <button>Submit</button>
-            {error && <div className="errpr">{error}</div>}
+            {error && <div className="error">{error}</div>}
         </form>
     )
 }

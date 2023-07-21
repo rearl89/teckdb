@@ -1,31 +1,31 @@
 import { createContext, useReducer } from "react";
 
-export const AnodeContext = createContext()
+export const Copper01Context = createContext()
 
 export const copper01Reducer = (state, action) => {
     switch (action.type) {
-        case 'SET_COPPER01':
+        case 'SET_COPPER01S':
             return {
-                copper01: action.payload
+                copper01s: action.payload
             }
         case 'CREATE_COPPER01':
             return {
-                copper01: action.payload, ...state.copper01
+                copper01s: [action.payload, ...state.copper01s]
             }
         default:
             return state
     }
 }
 
-export const AnodeContextProvider = ({ children }) => {
+export const Copper01ContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(copper01Reducer, {
-        copper01: null
+        copper01s: null
     })
 
 
     return (
-        <AnodeContext.Provider value={{state, dispatch}}>
+        <Copper01Context.Provider value={{...state, dispatch}}>
             { children }
-        </AnodeContext.Provider>
+        </Copper01Context.Provider>
     )
 }
