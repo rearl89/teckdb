@@ -1,7 +1,7 @@
 const Copper01Details = ({copper01}) => {
     return (
         <div className="anode-details">
-            <h4>Batch ID: {copper01.batchID} Set: {copper01.set}</h4>
+            <h4>Batch ID: {copper01.batchID} Set #: {copper01.set}</h4>
             <p><strong>Pass Post:</strong> {copper01.postPass} <strong>Sponge Pass:</strong> {copper01.spongePass}</p>
             <p><strong>Rng1b:</strong> {copper01.rng1b} <strong>Rng1m:</strong> {copper01.rng1b} <strong>Rng1t:</strong> {copper01.rng1t} <strong>Rng1 Avg:</strong> {copper01.rng1Average}</p>
             <p><strong>Rng1b:</strong> {copper01.rng1b} <strong>Rng2m:</strong> {copper01.rng2b} <strong>Rng2t:</strong> {copper01.rng2t} <strong>Rng2 Avg:</strong> {copper01.rng2Average}</p>

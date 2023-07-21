@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 
 import Copper01Details from '../components/Copper01Details'
+import Copper01Form from "../components/Copper01Form"
 
 
 const Copper01 = () => {
@@ -27,6 +28,7 @@ const Copper01 = () => {
                     <Copper01Details key={copper01._id} copper01={copper01} />
                 ))}
             </div>
+            <Copper01Form />
         </div>
     )
 }
