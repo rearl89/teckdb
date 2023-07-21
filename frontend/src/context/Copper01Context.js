@@ -12,6 +12,10 @@ export const copper01Reducer = (state, action) => {
             return {
                 copper01s: [action.payload, ...state.copper01s]
             }
+        case 'DELETE_COPPER01':
+            return {
+                copper01s: state.copper01s.filter((c) => c._id !== action.payload._id) 
+            }
         default:
             return state
     }

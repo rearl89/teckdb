@@ -1,4 +1,19 @@
+import { useCopper01Context } from "../hooks/useCopper01Context"
+
+import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+
 const Copper01Details = ({copper01}) => {
+    const { dispatch } = useCopper01Context()
+    const handleClick = async () => {
+        const response = await fetch('/copper01/' + copper01._id, {
+            method: 'DELETE'
+        })
+        const json = await response.json()
+
+        if (response.ok) {
+            dispatch({type: 'DELETE_COPPER01', payload: json})
+        }
+    }
     return (
         <div className="anode-details">
             <h4>Batch ID: {copper01.batchID} Set #: {copper01.set}</h4>
@@ -11,7 +26,8 @@ const Copper01Details = ({copper01}) => {
             <p><strong>Rng2od1:</strong> {copper01.rng2od1} <strong>Rng2od2:</strong> {copper01.rng2od2} <strong>Rng2od Avg:</strong> {copper01.rng2odAverage}</p>
             <p><strong>Rng3od1:</strong> {copper01.rng3od1} <strong>Rng3od2:</strong> {copper01.rng3od2} <strong>Rng3od3:</strong> {copper01.rng3od3} <strong>Rng3od4:</strong> {copper01.rng3od4} <strong>Rng3od Avg:</strong> {copper01.rng3odAverage}</p>
             <p><strong>Rng4od1:</strong> {copper01.rng4od1} <strong>Rng4od2:</strong> {copper01.rng4od2} <strong>Rng4od3:</strong> {copper01.rng4od3} <strong>Rng4od4:</strong> {copper01.rng4od4} <strong>Rng4od Avg:</strong> {copper01.rng4odAverage}</p>
-            <p>{copper01.createdAt}</p>
+            <p>{formatDistanceToNow(new Date(copper01.createdAt), { addSuffix: true })}</p>
+            <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
         </div>
     )
 }
