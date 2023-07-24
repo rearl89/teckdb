@@ -98,3 +98,45 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+.create {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  width: 45%;
+}
+
+.create .first-line {
+  display: flex;
+}
+
+.create .second-line {
+  display: flex;
+}
+
+.create .third-line {
+  display: flex;
+}
+
+.create .fourth-line {
+  display: flex;
+}
+
+.create .fifth-line {
+  display: flex;
+}
+
+.create .sixth-line {
+  display: flex;
+}
+
+.create .seventh-line {
+  display: flex;
+}
+
+.create .eigth-line {
+  display: flex;
+}

@@ -23,13 +23,13 @@ const Copper01 = () => {
 
     return (
         <div className="anodes">
-            <h2>3-300 CuP (01)</h2>
+            <Copper01Form />
             <div className="copper01s">
                 {copper01s && copper01s.map(copper01 => (
                     <Copper01Details copper01={copper01} key={copper01._id} />
                 ))}
             </div>
-            <Copper01Form />
+            
         </div>
     )
 }

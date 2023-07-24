@@ -6,8 +6,8 @@ const Copper01Form = () => {
 
     const [batchID, setBatchID] = useState('')
     const [set, setSet] = useState('')
-    const [postPass, setPostPass] = useState('')
-    const [spongePass, setSpongePass] = useState('')
+    const [postPass, setPostPass] = useState('n')
+    const [spongePass, setSpongePass] = useState('n')
     const [rng1b, setRng1b] = useState('')
     const [rng1m, setRng1m] = useState('')
     const [rng1t, setRng1t] = useState('')
@@ -91,93 +91,107 @@ const Copper01Form = () => {
 
     return (
         <form className="create" onSubmit={handleSubmit}>
-            <h3>Add a new anode</h3>
+            <h2>3-300 CuP (01)</h2>
+            <div className="first-line">
+                <label>Batch ID:</label>
+                <input type ="text" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
+                
+                <label>Set #:</label>
+                <input type ="number" onChange={(e) => setSet(e.target.value)} value={set} className={emptyFields.includes('set') ? 'error' : ''} />
 
-            <label>Batch ID:</label>
-            <input type ="text" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
+                <label>Pass Post?</label>
+                <input type ="checkbox" onChange={(e) => setPostPass(e.target.value)} value={postPass} className={emptyFields.includes('pass post') ? 'error' : ''} />
+                
 
-            <label>Set #:</label>
-            <input type ="number" onChange={(e) => setSet(e.target.value)} value={set} className={emptyFields.includes('set') ? 'error' : ''} />
+                <label>Pass Sponge?</label>
+                <input type ="checkbox" onChange={(e) => setSpongePass(e.target.value)} value={spongePass} className={emptyFields.includes('pass sponge') ? 'error' : ''} />
+            </div>
 
-            <label>Pass Post?</label>
-            <input type ="text" onChange={(e) => setPostPass(e.target.value)} value={postPass} className={emptyFields.includes('pass post') ? 'error' : ''} />
-            
+            <div className="second-line">
+                <label>Rng1b:</label>
+                <input type ="number" onChange={(e) => setRng1b(e.target.value)} value={rng1b} className={emptyFields.includes('rng1b') ? 'error' : ''} />
 
-            <label>Pass Sponge?</label>
-            <input type ="text" onChange={(e) => setSpongePass(e.target.value)} value={spongePass} className={emptyFields.includes('pass sponge') ? 'error' : ''} />
-            
-            
-            <label>Rng1b:</label>
-            <input type ="number" onChange={(e) => setRng1b(e.target.value)} value={rng1b} className={emptyFields.includes('rng1b') ? 'error' : ''} />
+                <label>Rng1m:</label>
+                <input type ="number" onChange={(e) => setRng1m(e.target.value)} value={rng1m} className={emptyFields.includes('rng1m') ? 'error' : ''} />
 
-            <label>Rng1m:</label>
-            <input type ="number" onChange={(e) => setRng1m(e.target.value)} value={rng1m} className={emptyFields.includes('rng1m') ? 'error' : ''} />
+                <label>Rng1t:</label>
+                <input type ="number" onChange={(e) => setRng1t(e.target.value)} value={rng1t} className={emptyFields.includes('rng1t') ? 'error' : ''} />
+            </div>
 
-            <label>Rng1t:</label>
-            <input type ="number" onChange={(e) => setRng1t(e.target.value)} value={rng1t} className={emptyFields.includes('rng1t') ? 'error' : ''} />
+            <div className="third-line">
+                <label>Rng2b:</label>
+                <input type ="number" onChange={(e) => setRng2b(e.target.value)} value={rng2b} className={emptyFields.includes('rng2b') ? 'error' : ''} />
 
-            <label>Rng2b:</label>
-            <input type ="number" onChange={(e) => setRng2b(e.target.value)} value={rng2b} className={emptyFields.includes('rng2b') ? 'error' : ''} />
+                <label>Rng2m:</label>
+                <input type ="number" onChange={(e) => setRng2m(e.target.value)} value={rng2m} className={emptyFields.includes('rng2m') ? 'error' : ''} />
 
-            <label>Rng2m:</label>
-            <input type ="number" onChange={(e) => setRng2m(e.target.value)} value={rng2m} className={emptyFields.includes('rng2m') ? 'error' : ''} />
+                <label>Rng2t:</label>
+                <input type ="number" onChange={(e) => setRng2t(e.target.value)} value={rng2t} className={emptyFields.includes('rng2t') ? 'error' : ''} />
+            </div>
 
-            <label>Rng2t:</label>
-            <input type ="number" onChange={(e) => setRng2t(e.target.value)} value={rng2t} className={emptyFields.includes('rng2t') ? 'error' : ''} />
+            <div className="fourth-line">
+                <label>Rng3b:</label>
+                <input type ="number" onChange={(e) => setRng3b(e.target.value)} value={rng3b} className={emptyFields.includes('rng3b') ? 'error' : ''} />
 
-            <label>Rng3b:</label>
-            <input type ="number" onChange={(e) => setRng3b(e.target.value)} value={rng3b} className={emptyFields.includes('rng3b') ? 'error' : ''} />
+                <label>Rng3m:</label>
+                <input type ="number" onChange={(e) => setRng3m(e.target.value)} value={rng3m} className={emptyFields.includes('rng3m') ? 'error' : ''} />
 
-            <label>Rng3m:</label>
-            <input type ="number" onChange={(e) => setRng3m(e.target.value)} value={rng3m} className={emptyFields.includes('rng3m') ? 'error' : ''} />
+                <label>Rng3t:</label>
+                <input type ="number" onChange={(e) => setRng3t(e.target.value)} value={rng3t} className={emptyFields.includes('rng3t') ? 'error' : ''} />
+            </div>
 
-            <label>Rng3t:</label>
-            <input type ="number" onChange={(e) => setRng3t(e.target.value)} value={rng3t} className={emptyFields.includes('rng3t') ? 'error' : ''} />
+            <div className="fifth-line">
+                <label>Rng4b:</label>
+                <input type ="number" onChange={(e) => setRng4b(e.target.value)} value={rng4b} className={emptyFields.includes('rng4b') ? 'error' : ''} />
 
-            <label>Rng4b:</label>
-            <input type ="number" onChange={(e) => setRng4b(e.target.value)} value={rng4b} className={emptyFields.includes('rng4b') ? 'error' : ''} />
+                <label>Rng4m:</label>
+                <input type ="number" onChange={(e) => setRng4m(e.target.value)} value={rng4m} className={emptyFields.includes('rng4m') ? 'error' : ''} />
 
-            <label>Rng4m:</label>
-            <input type ="number" onChange={(e) => setRng4m(e.target.value)} value={rng4m} className={emptyFields.includes('rng4m') ? 'error' : ''} />
+                <label>Rng4t:</label>
+                <input type ="number" onChange={(e) => setRng4t(e.target.value)} value={rng4t} className={emptyFields.includes('rng4t') ? 'error' : ''} />
+            </div>
 
-            <label>Rng4t:</label>
-            <input type ="number" onChange={(e) => setRng4t(e.target.value)} value={rng4t} className={emptyFields.includes('rng4t') ? 'error' : ''} />
+            <div className="sixth-line">
+                <label>Rng1od1:</label>
+                <input type ="number" onChange={(e) => setRng1od1(e.target.value)} value={rng1od1} className={emptyFields.includes('rng1od1') ? 'error' : ''} />
 
-            <label>Rng1od1:</label>
-            <input type ="number" onChange={(e) => setRng1od1(e.target.value)} value={rng1od1} className={emptyFields.includes('rng1od1') ? 'error' : ''} />
+                <label>Rng1od2:</label>
+                <input type ="number" onChange={(e) => setRng1od2(e.target.value)} value={rng1od2} className={emptyFields.includes('rng1od2') ? 'error' : ''} />
 
-            <label>Rng1od2:</label>
-            <input type ="number" onChange={(e) => setRng1od2(e.target.value)} value={rng1od2} className={emptyFields.includes('rng1od2') ? 'error' : ''} />
+                <label>Rng2od1:</label>
+                <input type ="number" onChange={(e) => setRng2od1(e.target.value)} value={rng2od1} className={emptyFields.includes('rng2od1') ? 'error' : ''} />
 
-            <label>Rng2od1:</label>
-            <input type ="number" onChange={(e) => setRng2od1(e.target.value)} value={rng2od1} className={emptyFields.includes('rng2od1') ? 'error' : ''} />
+                <label>Rng2od2:</label>
+                <input type ="number" onChange={(e) => setRng2od2(e.target.value)} value={rng2od2} className={emptyFields.includes('rng2od2') ? 'error' : ''} />
+            </div>
 
-            <label>Rng2od2:</label>
-            <input type ="number" onChange={(e) => setRng2od2(e.target.value)} value={rng2od2} className={emptyFields.includes('rng2od2') ? 'error' : ''} />
+            <div className="seventh-line">
+                <label>Rng3od1:</label>
+                <input type ="number" onChange={(e) => setRng3od1(e.target.value)} value={rng3od1} className={emptyFields.includes('rng3od1') ? 'error' : ''} />
 
-            <label>Rng3od1:</label>
-            <input type ="number" onChange={(e) => setRng3od1(e.target.value)} value={rng3od1} className={emptyFields.includes('rng3od1') ? 'error' : ''} />
+                <label>Rng3od2:</label>
+                <input type ="number" onChange={(e) => setRng3od2(e.target.value)} value={rng3od2} className={emptyFields.includes('rng3od2') ? 'error' : ''} />
 
-            <label>Rng3od2:</label>
-            <input type ="number" onChange={(e) => setRng3od2(e.target.value)} value={rng3od2} className={emptyFields.includes('rng3od2') ? 'error' : ''} />
+                <label>Rng3od3:</label>
+                <input type ="number" onChange={(e) => setRng3od3(e.target.value)} value={rng3od3} className={emptyFields.includes('rng3od3') ? 'error' : ''} />
 
-            <label>Rng3od3:</label>
-            <input type ="number" onChange={(e) => setRng3od3(e.target.value)} value={rng3od3} className={emptyFields.includes('rng3od3') ? 'error' : ''} />
+                <label>Rng3od4:</label>
+                <input type ="number" onChange={(e) => setRng3od4(e.target.value)} value={rng3od4} className={emptyFields.includes('rng3od4') ? 'error' : ''} />
+            </div>
 
-            <label>Rng3od4:</label>
-            <input type ="number" onChange={(e) => setRng3od4(e.target.value)} value={rng3od4} className={emptyFields.includes('rng3od4') ? 'error' : ''} />
+            <div className="eigth-line">
+                <label>Rng4od1:</label>
+                <input type ="number" onChange={(e) => setRng4od1(e.target.value)} value={rng4od1} className={emptyFields.includes('rng4od1') ? 'error' : ''} />
 
-            <label>Rng4od1:</label>
-            <input type ="number" onChange={(e) => setRng4od1(e.target.value)} value={rng4od1} className={emptyFields.includes('rng4od1') ? 'error' : ''} />
+                <label>Rng4od2:</label>
+                <input type ="number" onChange={(e) => setRng4od2(e.target.value)} value={rng4od2} className={emptyFields.includes('rng4od2') ? 'error' : ''} />
 
-            <label>Rng4od2:</label>
-            <input type ="number" onChange={(e) => setRng4od2(e.target.value)} value={rng4od2} className={emptyFields.includes('rng4od2') ? 'error' : ''} />
+                <label>Rng4od3:</label>
+                <input type ="number" onChange={(e) => setRng4od3(e.target.value)} value={rng4od3} className={emptyFields.includes('rng4od3') ? 'error' : ''} />
 
-            <label>Rng4od3:</label>
-            <input type ="number" onChange={(e) => setRng4od3(e.target.value)} value={rng4od3} className={emptyFields.includes('rng4od3') ? 'error' : ''} />
-
-            <label>Rng4od4:</label>
-            <input type ="number" onChange={(e) => setRng4od4(e.target.value)} value={rng4od4} className={emptyFields.includes('rng4od4') ? 'error' : ''} />
+                <label>Rng4od4:</label>
+                <input type ="number" onChange={(e) => setRng4od4(e.target.value)} value={rng4od4} className={emptyFields.includes('rng4od4') ? 'error' : ''} />
+            </div>
 
             <button>Submit</button>
             {error && <div className="error">{error}</div>}
