@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useCopper01Context } from "../hooks/useCopper01Context"
 import { Link } from "react-router-dom"
 
+import Navbar from "../components/Navbar"
 import Copper01Details from '../components/Copper01Details'
 import Copper01Form from "../components/Copper01Form"
 
@@ -25,6 +26,7 @@ const Copper01 = () => {
 
     return (
         <div>
+            <Navbar />
             <Copper01Form />
             <Link to="/copper01/list" target="_blank" className="listButton">List View</Link>
             <div className="copper01s">

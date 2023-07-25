@@ -26,11 +26,7 @@ header a {
   color: #333;
   text-decoration: none;
 }
-.pages{
-  max-width: 1400px;
-  padding: 20px;
-  margin: 0 auto;
-}
+
 
 
 .anode-details {
@@ -42,7 +38,7 @@ header a {
   display: inline-block;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-  margin-right: 20px;
+  margin-left: 30px;
 }
 .anode-details h4 {
   margin: 0 0 10px 0;
@@ -98,17 +94,7 @@ form button {
   position: absolute;
   right: 20px;
 }
-div.error {
-  padding: 10px;
-  background: #ffefef;
-  border: 1px solid var(--error);
-  color: var(--error);
-  border-radius: 4px;
-  margin: 20px 0;
-}
-input.error {
-  border: 1px solid var(--error);
-}
+
 
 .create {
   background: #fff;
@@ -119,6 +105,19 @@ input.error {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   width: 75%;
   padding-bottom: 60px;
+}
+
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin-bottom: -45px;
+  width: 162px;
+}
+input.error {
+  border: 1px solid var(--error);
 }
 
 .create .first-line {
@@ -180,7 +179,6 @@ input.error {
   font-size: 10px;
   border: 1px solid black;
   width:max-content;
-  margin-left: -50px;
 }
 
 .listButton {
@@ -192,5 +190,6 @@ input.error {
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
+  margin-left: 30px;
 }
 

@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
 
+import Navbar from "../components/Navbar"
+
 const Copper = () => {
     return (
-        <div className="page">
+        <div>
+            <Navbar />
             <h2>Copper</h2>
             <Link to="/copper01"><h3>3-300 CuP (01)</h3></Link>
             <Link to="/copper05"><h3>3-300 CuP (05)</h3></Link>
