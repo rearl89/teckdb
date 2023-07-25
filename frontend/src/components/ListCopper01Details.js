@@ -39,8 +39,7 @@ const ListCopper01Details = ({copper01}) => {
                     <p>{copper01.rng4od2}</p>
                     <p>{copper01.rng4od3}</p>
                     <p>{copper01.rng4od4}</p>
-                    <p>{copper01.rng4odAverage}</p>
-                    
+                    <p>{copper01.rng4odAverage}</p>    
         </div>
     )
 }
