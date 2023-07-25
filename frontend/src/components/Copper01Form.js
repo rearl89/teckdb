@@ -6,8 +6,8 @@ const Copper01Form = () => {
 
     const [batchID, setBatchID] = useState('')
     const [set, setSet] = useState('')
-    const [postPass, setPostPass] = useState('y')
-    const [spongePass, setSpongePass] = useState('y')
+    const [postPass, setPostPass] = useState('')
+    const [spongePass, setSpongePass] = useState('')
     const [rng1b, setRng1b] = useState('')
     const [rng1m, setRng1m] = useState('')
     const [rng1t, setRng1t] = useState('')
@@ -99,12 +99,12 @@ const Copper01Form = () => {
                 <label className="set">Set #:</label>
                 <input type ="number" onChange={(e) => setSet(e.target.value)} value={set} className={emptyFields.includes('set') ? 'error' : ''} />
 
-                <label className="post">Pass Post?</label>
-                <input type ="checkbox" onClick={(e) => setPostPass(e.target.value)} value={postPass} className={emptyFields.includes('pass post') ? 'error' : ''} />
+                <label className="post">Pass Post? (y/n)</label>
+                <input type ="text" onChange={(e) => setPostPass(e.target.value)} value={postPass} className={emptyFields.includes('pass post') ? 'error' : ''} />
                 
 
-                <label>Pass Sponge?</label>
-                <input type ="checkbox" onClick={(e) => setSpongePass(e.target.value)} value={spongePass} className={emptyFields.includes('pass sponge') ? 'error' : ''} />
+                <label className="post">Pass Sponge? (y/n)</label>
+                <input type ="text" onChange={(e) => setSpongePass(e.target.value)} value={spongePass} className={emptyFields.includes('pass sponge') ? 'error' : ''} />
             </div>
 
             <div className="second-line">

@@ -22,7 +22,7 @@ const Copper01 = () => {
     }, [dispatch])
 
     return (
-        <div className="anodes">
+        <div>
             <Copper01Form />
             <div className="copper01s">
                 {copper01s && copper01s.map(copper01 => (
