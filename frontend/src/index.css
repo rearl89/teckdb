@@ -94,7 +94,19 @@ form button {
   position: absolute;
   right: 20px;
 }
-
+.formHeader {
+  display: flex;
+}
+.formGrid {
+  display: grid;
+  grid-template-columns: 12% 10% 10% 10% 12% 10% 13% 10%;
+}
+#anotherPage {
+  height: 25px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
 
 .create {
   background: #fff;
@@ -120,50 +132,18 @@ input.error {
   border: 1px solid var(--error);
 }
 
-.create .first-line {
-  display: inline-flex;
-}
-
-.create .second-line {
-  display: flex;
-}
-
-.create .third-line {
-  display: flex;
-}
-
-.create .fourth-line {
-  display: flex;
-}
-
-.create .fifth-line {
-  display: flex;
-}
-
-.create .sixth-line {
-  display: flex;
-}
-
-.create .seventh-line {
-  display: flex;
-}
-
-.create .eigth-line {
-  display: flex;
-}
-
-
-
-
-.set {  
-  margin-left: 25px;
-}
-
 .post {
   margin-left: 25px;
+  margin-top: 15px;
 }
 
 .ring {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.stragglers {
+  margin-bottom: 10px;
   margin-left: 20px;
 }
 
@@ -174,11 +154,12 @@ input.error {
 
 .listContainer {
   display: grid;
-  grid-template-columns: 75px 75px 100px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+  grid-template-columns: 75px 45px 75px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px;
   grid-gap: 1rem;
   font-size: 10px;
-  border: 1px solid black;
+  border-bottom: 2px solid black;
   width:max-content;
+  padding-right: 25px;
 }
 
 .listButton {
