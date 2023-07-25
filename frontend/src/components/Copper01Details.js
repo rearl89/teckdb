@@ -16,28 +16,28 @@ const Copper01Details = ({copper01}) => {
     }
     return (
         <div className="anode-details">
-            <h4>Batch ID: {copper01.batchID} &emsp;&emsp; Set #: {copper01.set} &emsp;&emsp; Date: {format(new Date(copper01.createdAt), 'MM-dd-yyyy')} &emsp;&emsp;</h4>
+            <h4>Batch ID: {copper01.batchID} &emsp;&emsp; Set #: {copper01.set} &emsp;&emsp; Date: {format(new Date(copper01.createdAt), 'MM-dd-yyyy')}</h4>
                     
                     <p><strong>Pass Post:</strong> {copper01.postPass} &emsp;&emsp;&emsp;
                     <strong className="ring2">Sponge Pass:</strong> {copper01.spongePass}</p>
                     <hr/>
                     <p><strong>Ring 1 &emsp;&emsp;&emsp; b:</strong> {copper01.rng1b}
-                    <strong className="ring2">m:</strong> {copper01.rng1b}
+                    <strong className="ring2">m:</strong> {copper01.rng1m}
                     <strong className="ring2">t:</strong> {copper01.rng1t}
                     <strong className="ring2">Avg:</strong> {copper01.rng1Average}</p>
                     <hr/>
-                    <p><strong>Ring 2 &emsp;&emsp;&emsp; b:</strong> {copper01.rng1b} 
-                    <strong className="ring2">m:</strong>  {copper01.rng2b} 
+                    <p><strong>Ring 2 &emsp;&emsp;&emsp; b:</strong> {copper01.rng2b} 
+                    <strong className="ring2">m:</strong>  {copper01.rng2m} 
                     <strong className="ring2">t:</strong> {copper01.rng2t} 
                     <strong className="ring2">Avg:</strong> {copper01.rng2Average}</p>
                     <hr/>
-                    <p><strong>Ring 3  &emsp;&emsp;&emsp; b:</strong> {copper01.rng1b} 
-                    <strong className="ring2"g>m:</strong> {copper01.rng3b} 
+                    <p><strong>Ring 3  &emsp;&emsp;&emsp; b:</strong> {copper01.rng3b} 
+                    <strong className="ring2"g>m:</strong> {copper01.rng3m} 
                     <strong className="ring2">t:</strong> {copper01.rng3t} 
                     <strong className="ring2">Avg:</strong> {copper01.rng3Average}</p>
                     <hr/>
-                    <p><strong>Ring 4  &emsp;&emsp;&emsp; b:</strong> {copper01.rng1b} 
-                    <strong className="ring2">m:</strong> {copper01.rng4b} 
+                    <p><strong>Ring 4  &emsp;&emsp;&emsp; b:</strong> {copper01.rng4b} 
+                    <strong className="ring2">m:</strong> {copper01.rng4m} 
                     <strong className="ring2">t:</strong> {copper01.rng4t} 
                     <strong className="ring2">Avg:</strong> {copper01.rng4Average}</p>
                     <hr/>

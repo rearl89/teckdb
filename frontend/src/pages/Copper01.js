@@ -1,8 +1,10 @@
 import { useEffect } from "react"
 import { useCopper01Context } from "../hooks/useCopper01Context"
+import { Link } from "react-router-dom"
 
 import Copper01Details from '../components/Copper01Details'
 import Copper01Form from "../components/Copper01Form"
+
 
 
 const Copper01 = () => {
@@ -24,6 +26,7 @@ const Copper01 = () => {
     return (
         <div>
             <Copper01Form />
+            <Link to="/copper01/list" target="_blank" className="listButton">List View</Link>
             <div className="copper01s">
                 {copper01s && copper01s.map(copper01 => (
                     <Copper01Details copper01={copper01} key={copper01._id} />
