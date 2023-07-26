@@ -15,15 +15,27 @@ const SnNexxDetails = ({sn_nexx}) => {
         }
     }
     return (
-        <div>
-            <h4>Batch ID: {sn_nexx.batchID} &emsp;&emsp; Anode #: {sn_nexx.anode} &emsp;&emsp; Date: {format(new Date(sn_nexx.createdAt), 'MM-dd-yyyy')}</h4>
-                    
-                    <p><strong>Weight:</strong> {sn_nexx.weight}
-                    <strong>Thickness:</strong> {sn_nexx.thickness}</p>
-                    <hr/>
-                    <p><strong>Pass Visual? </strong> {sn_nexx.visualPass}
-                    <strong>Comment:</strong> {sn_nexx.comment}
-                    </p>
+        <div className="snNexxContainer">
+            <div className="snNexxGrid">
+                <div>
+                    <p><strong>Batch ID:</strong> {sn_nexx.batchID}</p>
+                </div>
+                    <p><strong>Anode #:</strong> {sn_nexx.anode}</p>
+                <div>
+                    <p><strong>Date:</strong> {format(new Date(sn_nexx.createdAt), 'MM-dd-yyyy')}</p>
+                </div>
+                <div>
+                    <p><strong>Weight:</strong> {sn_nexx.weight}</p>
+                </div>
+                <div>
+                    <p><strong>Thickness:</strong> {sn_nexx.thickness}</p>
+                </div>
+                <div>  
+                    <p><strong>Pass Visual? </strong> {sn_nexx.visualPass}</p>
+                </div>
+            </div>
+                <hr/>
+            <p><strong>Comment:</strong> {sn_nexx.comment}</p>
 
             <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
         </div>
