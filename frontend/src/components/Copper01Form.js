@@ -101,25 +101,25 @@ const Copper01Form = () => {
                     <label className="ring">&emsp;&ensp;Batch ID:</label>
                 </div>
                 <div>
-                    <input type ="text" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
+                    <input type="text" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
                 </div>
                 <div>    
                     <label className="ring">&emsp;&ensp;Set #:</label>
                 </div>
                 <div>
-                    <input type ="number" onChange={(e) => setSet(e.target.value)} value={set} className={emptyFields.includes('set') ? 'error' : ''} />
+                    <input type="number" onChange={(e) => setSet(e.target.value)} value={set} className={emptyFields.includes('set') ? 'error' : ''} />
                 </div>
                 <div>
                     <label className="post">&ensp;Pass Post?</label>
                 </div>
                 <div>
-                    <input type ="text" onChange={(e) => setPostPass(e.target.value)} value={postPass} className={emptyFields.includes('pass post') ? 'error' : ''} />
+                    <input type="text" onChange={(e) => setPostPass(e.target.value)} value={postPass} className={emptyFields.includes('pass post') ? 'error' : ''} />
                 </div>
                 <div>    
                     <label className="post">Pass Sponge?</label>
                 </div>
                 <div>
-                    <input type ="text" onChange={(e) => setSpongePass(e.target.value)} value={spongePass} className={emptyFields.includes('pass sponge') ? 'error' : ''} />
+                    <input type="text" onChange={(e) => setSpongePass(e.target.value)} value={spongePass} className={emptyFields.includes('pass sponge') ? 'error' : ''} />
                 </div>
 
 
@@ -131,7 +131,7 @@ const Copper01Form = () => {
                     <label className="ring">&ensp;Bottom:</label>
                 </div>
                 <div>
-                    <input type ="number" onChange={(e) => setRng1b(e.target.value)} value={rng1b} className={emptyFields.includes('rng1b') ? 'error' : ''} />
+                    <input type="number" onChange={(e) => setRng1b(e.target.value)} value={rng1b} className={emptyFields.includes('rng1b') ? 'error' : ''} />
                 </div>
                 <div>
                     <label className="ring">&emsp;&emsp;&ensp;Middle:</label>

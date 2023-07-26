@@ -33,8 +33,7 @@ const Copper01 = () => {
                 {copper01s && copper01s.map(copper01 => (
                     <Copper01Details copper01={copper01} key={copper01._id} />
                 ))}
-            </div>
-            
+            </div> 
         </div>
     )
 }
