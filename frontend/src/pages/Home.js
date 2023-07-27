@@ -8,8 +8,10 @@ const Home = () => {
             <Navbar />
             <div className="home">
                 <h2>Home</h2>
-                    <Link to="/copper" className="linksButton">Cu</Link>
-                    <Link to="/tin" className="linksButton">Sn</Link>
+                    <div className="homeButtons">
+                        <Link to="/copper" className="linksButton">Cu</Link>
+                        <Link to="/tin" className="linksButton">Sn</Link>
+                    </div>
             </div>
         </div>
     )

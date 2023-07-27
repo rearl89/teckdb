@@ -50,7 +50,7 @@ const SnNexxForm = () => {
             <div>
                 <h2>Sn NEXX</h2>
             </div>
-            <div>
+            <div className="snFormGrid">
                 <div>
                     <label>
                         Batch ID:
@@ -59,12 +59,14 @@ const SnNexxForm = () => {
                 <div>
                     <input type="number" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
                 </div>
+                <br/>
                 <div>
                     <label>Anode #:</label>
                 </div>
                 <div>
                     <input type="number" onChange={(e) => setAnode(e.target.value)} value={anode} className={emptyFields.includes('anode') ? 'error' : ''} />
                 </div>
+                <br/>
                 <div>
                     <label>Weight:</label>
                 </div>
@@ -77,17 +79,25 @@ const SnNexxForm = () => {
                 <div>
                     <input type="number" onChange={(e) => setThickness(e.target.value)} value={thickness} className={emptyFields.includes('thickness') ? 'error' : ''} />
                 </div>
+                <br/>
                 <div>
                     <label>Pass Visual?</label>
                 </div>
                 <div>
                     <input type="text" onChange={(e) => setVisualPass(e.target.value)} value={visualPass} className={emptyFields.includes('pass visual') ? 'error' : ''} />
                 </div>
+                <br/>
+                <div>
+                    <br/>
+                </div>
+                <div>
+                    <br/>
+                </div>
                 <div>
                     <label>Comment:</label>
                 </div>
                 <div>
-                    <input type="text" onChange={(e) => setComment(e.target.value)} value={comment} className={emptyFields.includes('comment') ? 'error' : ''} />
+                    <textarea type="text" rows="5" cols="110"  onChange={(e) => setComment(e.target.value)} value={comment} className={emptyFields.includes('comment') ? 'error' : ''} />
                 </div>
             </div>
             <button>Submit</button>
