@@ -42,7 +42,7 @@ const createSn_Nexx = async (req, res) => {
         emptyFields.push('pass visual')
     }
     if (emptyFields.length > 0) {
-        return res.status(400).json({error: 'Please fill in all fields', emptyFields })
+        return res.status(400).json({error: 'Please fill in all required fields', emptyFields })
     }
 
     try {

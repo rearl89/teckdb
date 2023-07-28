@@ -167,7 +167,7 @@ div.error {
   color: var(--error);
   border-radius: 4px;
   margin-bottom: -45px;
-  width: 162px;
+  width: 234px;
 }
 input.error {
   border: 1px solid var(--error);
@@ -228,4 +228,29 @@ input.error {
 
 .snFormGrid label, input {
     display: inline;
+}
+
+.listSnNexx {
+  display: grid;
+  grid-template-columns: 75px 45px 75px 45px 45px 45px 1075px;
+  grid-gap: 1rem;
+  font-size: 10px;
+  border-bottom: 2px solid black;
+  width:max-content;
+  padding-right: 25px;
+}
+
+.listSnNexx:nth-child(even) {
+  background-color: lightgray;
+}
+
+.modalButtons {
+  background: var(--primary);
+  width: 100px;
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
 }

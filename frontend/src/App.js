@@ -7,6 +7,7 @@ import Copper from './pages/Copper';
 import Tin from './pages/Tin';
 import SN_NEXX from './pages/SN_NEXX';
 import ListCopper01 from './pages/ListCopper01';
+import ListSnNexx from './pages/ListSN_NEXX';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/copper01" element={<Copper01 />} />
               <Route path="/sn_nexx" element={<SN_NEXX />} />
               <Route path="/copper01/list" element={<ListCopper01 />} />
+              <Route path="/sn_nexx/list" element={<ListSnNexx />} />
             </Routes>
           </div>
       </BrowserRouter>

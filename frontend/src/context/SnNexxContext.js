@@ -16,6 +16,18 @@ export const sn_nexxReducer = (state, action) => {
             return {
                 sn_nexxs: state.sn_nexxs.filter((s) => s._id !== action.payload._id) 
             }
+        // modal code
+        case "UPDATE_SN_NEXX":
+            let updatedIndex = state.sn_nexxs.findIndex(
+                (sn_nexx) => sn_nexx._id === action.payload._id
+            )
+            if (updatedIndex === -1) {
+                return state
+            }
+            const updatedSnNexxs = [ ...state.sn_nexxs.slice(0, updatedIndex), action.payload, ...state.sn_nexxs.slice(updatedIndex =1)]
+            return {
+                sn_nexxs: updatedSnNexxs
+            }
         default:
             return state
     }
