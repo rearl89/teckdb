@@ -223,11 +223,19 @@ input.error {
   display: grid;
   grid-template-columns: 12% 10% 10% 10% 10% 10% 12% 10%;
   text-align: center;
-
 }
 
 .snFormGrid label, input {
-    display: inline;
+  display: inline;
+}
+.snFormGrid label {
+  display: flex;
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+#comment {
+  width: 820px;
 }
 
 .listSnNexx {

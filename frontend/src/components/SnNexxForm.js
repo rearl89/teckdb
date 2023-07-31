@@ -5,7 +5,6 @@ const SnNexxForm = () => {
     const { dispatch } = useSnNexxContext()
 
     const [batchID, setBatchID] = useState('')
-    // const [anode, setAnode] = useState('')
     const [weight, setWeight] = useState('')
     const [thickness, setThickness] = useState('')
     const [visualPass, setVisualPass] = useState('')
@@ -17,7 +16,6 @@ const SnNexxForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        // re-add anode below
         const sn_nexx = {batchID, weight, thickness, visualPass, comment}
 
         const response = await fetch('/sn_nexx', {
@@ -35,7 +33,6 @@ const SnNexxForm = () => {
         }
         if (response.ok) {
             setBatchID('')
-            // setAnode('')
             setWeight('')
             setThickness('')
             setVisualPass('')
@@ -63,14 +60,6 @@ const SnNexxForm = () => {
                 <div>
                     <input type="number" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
                 </div>
-              
-                {/* <div>
-                    <label>Anode #:</label>
-                </div>
-                <div>
-                    <input type="number" onChange={(e) => setAnode(e.target.value)} value={anode} className={emptyFields.includes('anode') ? 'error' : ''} />
-                </div>  */}
-                
                 <div>
                     <label>Weight:</label>
                 </div>
@@ -93,7 +82,7 @@ const SnNexxForm = () => {
                     <label>Comment:</label>
                 </div>
                 <div>
-                    <textarea type="text" rows="5" cols="110"  onChange={(e) => setComment(e.target.value)} value={comment} className={emptyFields.includes('comment') ? 'error' : ''} />
+                    <input type="text" id="comment" onChange={(e) => setComment(e.target.value)} value={comment} className={emptyFields.includes('comment') ? 'error' : ''} />
                 </div>
             </div>
             <button>Submit</button>
