@@ -25,16 +25,17 @@ const getSn_Nexx = async (req, res) => {
 }
 
 const createSn_Nexx = async (req, res) => {
-    const {batchID, anode, weight, thickness, visualPass, comment} = req.body
+    //re-add anode below
+    const {batchID, weight, thickness, visualPass, comment} = req.body
 
     let emptyFields = []
 
     if (!batchID) {
         emptyFields.push('batchID')
     }
-    if (!anode) {
-        emptyFields.push('anode')
-    }
+    // if (!anode) {
+    //     emptyFields.push('anode')
+    // }
     if (!weight) {
         emptyFields.push('weight')
     }
@@ -47,7 +48,8 @@ const createSn_Nexx = async (req, res) => {
 
     try {
         const sn_nexx = await Sn_Nexx.create({
-            batchID, anode, weight, thickness, visualPass, comment
+            //re-add anode below
+            batchID, weight, thickness, visualPass, comment
         })
         res.status(200).json(sn_nexx)
     } catch (error) {

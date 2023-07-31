@@ -244,13 +244,10 @@ input.error {
   background-color: lightgray;
 }
 
-.modalButtons {
-  background: var(--primary);
-  width: 100px;
-  border: 0;
-  color: #fff;
-  padding: 10px;
-  font-family: "Poppins";
-  border-radius: 4px;
-  cursor: pointer;
+.tin-links {
+  text-decoration: none;
+}
+
+.snLinks {
+  margin-left: 50px;
 }

@@ -5,7 +5,7 @@ const SnNexxForm = () => {
     const { dispatch } = useSnNexxContext()
 
     const [batchID, setBatchID] = useState('')
-    const [anode, setAnode] = useState('')
+    // const [anode, setAnode] = useState('')
     const [weight, setWeight] = useState('')
     const [thickness, setThickness] = useState('')
     const [visualPass, setVisualPass] = useState('')
@@ -13,10 +13,12 @@ const SnNexxForm = () => {
     const [error, setError] = useState(null)
     const [emptyFields, setEmptyFields] = useState([])
 
+
+
     const handleSubmit = async (e) => {
         e.preventDefault()
-
-        const sn_nexx = {batchID, anode, weight, thickness, visualPass, comment}
+        // re-add anode below
+        const sn_nexx = {batchID, weight, thickness, visualPass, comment}
 
         const response = await fetch('/sn_nexx', {
             method: 'POST',
@@ -33,7 +35,7 @@ const SnNexxForm = () => {
         }
         if (response.ok) {
             setBatchID('')
-            setAnode('')
+            // setAnode('')
             setWeight('')
             setThickness('')
             setVisualPass('')
@@ -44,6 +46,8 @@ const SnNexxForm = () => {
             dispatch({type: 'CREATE_SN_NEXX', payload: json})
         }
     }
+
+    
 
     return (
         <form className="create" onSubmit={handleSubmit}>
@@ -59,19 +63,19 @@ const SnNexxForm = () => {
                 <div>
                     <input type="number" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
                 </div>
-                <br/>
-                <div>
+              
+                {/* <div>
                     <label>Anode #:</label>
                 </div>
                 <div>
                     <input type="number" onChange={(e) => setAnode(e.target.value)} value={anode} className={emptyFields.includes('anode') ? 'error' : ''} />
-                </div>
-                <br/>
+                </div>  */}
+                
                 <div>
                     <label>Weight:</label>
                 </div>
                 <div>
-                    <input type="number" onChange={(e) => setWeight(e.target.value)} value={weight} className={emptyFields.includes('weight') ? 'error' : ''} />
+                    <input type="number" onChange={(e) => setWeight(e.target.value)} value={weight} step="any" className={emptyFields.includes('weight') ? 'error' : ''} />
                 </div>
                 <div>
                     <label>Thickness:</label>
@@ -79,19 +83,11 @@ const SnNexxForm = () => {
                 <div>
                     <input type="number" onChange={(e) => setThickness(e.target.value)} value={thickness} className={emptyFields.includes('thickness') ? 'error' : ''} />
                 </div>
-                <br/>
                 <div>
                     <label>Pass Visual?</label>
                 </div>
                 <div>
                     <input type="text" onChange={(e) => setVisualPass(e.target.value)} value={visualPass} className={emptyFields.includes('pass visual') ? 'error' : ''} />
-                </div>
-                <br/>
-                <div>
-                    <br/>
-                </div>
-                <div>
-                    <br/>
                 </div>
                 <div>
                     <label>Comment:</label>
