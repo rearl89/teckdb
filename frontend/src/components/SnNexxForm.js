@@ -13,7 +13,6 @@ const SnNexxForm = () => {
     const [emptyFields, setEmptyFields] = useState([])
 
 
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         const sn_nexx = {batchID, weight, thickness, visualPass, comment}
@@ -44,8 +43,6 @@ const SnNexxForm = () => {
         }
     }
 
-    
-
     return (
         <form className="create" onSubmit={handleSubmit}>
             <div>
@@ -53,9 +50,7 @@ const SnNexxForm = () => {
             </div>
             <div className="snFormGrid">
                 <div>
-                    <label>
-                        Batch ID:
-                    </label>
+                    <label>Batch ID:</label>
                 </div>
                 <div>
                     <input type="number" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
