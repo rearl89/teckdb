@@ -1,6 +1,9 @@
 # teckdb
 npm installs
 
+backend:
 mongoose
 express
-dat-fns
+
+frontend:
+date-fns
