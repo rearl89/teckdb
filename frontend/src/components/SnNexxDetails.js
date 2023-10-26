@@ -6,9 +6,8 @@ import format from 'date-fns/format'
 const SnNexxDetails = ({sn_nexx}) => {
 
     const { dispatch } = useSnNexxContext()
-    //modal code
-    const [isModalOpen, setIsModalOpen] = useState(false)
-
+    
+    const [isModalOpen, setIsModalOpen] = useState(false) //modal code
 
     const handleClick = async () => {
         const response = await fetch('/sn_nexx/' + sn_nexx._id, {
@@ -27,7 +26,6 @@ const SnNexxDetails = ({sn_nexx}) => {
     const closeModal = () => {
         setIsModalOpen(false)
     }
-
 
     return (
         <div className="anode-details">

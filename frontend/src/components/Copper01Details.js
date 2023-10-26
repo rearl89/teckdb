@@ -1,9 +1,14 @@
+import { useState } from "react"
 import { useCopper01Context } from "../hooks/useCopper01Context"
-
+import Copper01EditModal from "./Copper01EditModal"
 import format from 'date-fns/format'
 
 const Copper01Details = ({copper01}) => {
+
     const { dispatch } = useCopper01Context()
+
+    const [isModalOpen, setIsModalOpen] = useState(false) //modal code
+
     const handleClick = async () => {
         const response = await fetch('/copper01/' + copper01._id, {
             method: 'DELETE'
@@ -14,6 +19,14 @@ const Copper01Details = ({copper01}) => {
             dispatch({type: 'DELETE_COPPER01', payload: json})
         }
     }
+    //modal code
+    const handleEditClick = () => {
+        setIsModalOpen(true)
+    }
+    const closeModal = () => {
+        setIsModalOpen(false)
+    }
+
     return (
         <div className="anode-details">
             <h4>Batch ID: {copper01.batchID} &emsp;&emsp; Set #: {copper01.set} &emsp;&emsp; Date: {format(new Date(copper01.createdAt), 'MM-dd-yyyy')}</h4>
@@ -62,6 +75,16 @@ const Copper01Details = ({copper01}) => {
                     <strong className="ring2">Avg:</strong> {copper01.rng4odAverage}</p>
 
             <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
+
+            {/* modal code */}
+            <button onClick={handleEditClick}>Edit</button>
+            {isModalOpen && (
+                <Copper01EditModal
+                    copper01={copper01}
+                    closeModal={closeModal}
+                />
+            )}
+            
         </div>
     )
 }
