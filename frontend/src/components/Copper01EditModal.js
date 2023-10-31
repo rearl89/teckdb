@@ -80,23 +80,9 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
         <div className="modal-scrollable">
           <h2>Edit Copper 01</h2>
           <label>
-            Batch ID:
-            <input
-              type="number"
-              name="batchID"
-              value={editedData.batchID}
-              onChange={handleChange}
-            />
+            <strong>Batch ID: {copper01.batchID} &emsp;&emsp;&emsp;&emsp; Set #: {copper01.set}</strong>
           </label>
-          <label>
-            Set #:
-            <input
-              type="number"
-              name="set"
-              value={editedData.set}
-              onChange={handleChange}
-            />
-          </label>
+          <hr/>
           <label>
           Pass Post?
             <input

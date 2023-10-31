@@ -77,14 +77,13 @@ const Copper01Details = ({copper01}) => {
             <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
 
             {/* modal code */}
-            <button onClick={handleEditClick}>Edit</button>
+            <button className="edit-button" onClick={handleEditClick}>Edit</button>
             {isModalOpen && (
                 <Copper01EditModal
                     copper01={copper01}
                     closeModal={closeModal}
                 />
             )}
-            
         </div>
     )
 }
