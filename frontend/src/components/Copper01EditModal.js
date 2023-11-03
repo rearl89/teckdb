@@ -13,35 +13,71 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
     rng1b: copper01.rng1b,
     rng1m: copper01.rng1m,
     rng1t: copper01.rng1t,
+    rng1Average: copper01.rng1Average,
     rng2b: copper01.rng2b,
     rng2m: copper01.rng2m,
     rng2t: copper01.rng2t,
+    rng2Average: copper01.rng2Average,
     rng3b: copper01.rng3b,
     rng3m: copper01.rng3m,
     rng3t: copper01.rng3t,
+    rng3Average: copper01.rng3Average,
     rng4b: copper01.rng4b,
     rng4m: copper01.rng4m,
     rng4t: copper01.rng4t,
+    rng4Average: copper01.rng4Average,
     rng1od1: copper01.rng1od1,
     rng1od2: copper01.rng1od2,
+    rng1odAverage: copper01.rng1odAverage,
     rng2od1: copper01.rng2od1,
     rng2od2: copper01.rng2od2,
+    rng2odAverage: copper01.rng2odAverage,
     rng3od1: copper01.rng3od1,
     rng3od2: copper01.rng3od2,
     rng3od3: copper01.rng3od3,
     rng3od4: copper01.rng3od4,
+    rng3odAverage: copper01.rng3odAverage,
     rng4od1: copper01.rng4od1,
     rng4od2: copper01.rng4od2,
     rng4od3: copper01.rng4od3,
-    rng4od4: copper01.rng4od4
+    rng4od4: copper01.rng4od4,
+    rng4odAverage: copper01.rng4odAverage
   });
+
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setEditedData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setEditedData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    const updatedData = { ...editedData, [name]: parseFloat(value) };
+    
+    // Calculate and update the "Ring 1 Average" when "Bottom," "Middle," or "Top" changes
+    if (name === "rng1b" || name === "rng1m" || name === "rng1t") {
+      updatedData.rng1Average = Math.round((updatedData.rng1b + updatedData.rng1m + updatedData.rng1t) / 3);
+    }
+    if (name === "rng2b" || name === "rng2m" || name === "rng2t") {
+      updatedData.rng2Average = Math.round((updatedData.rng2b + updatedData.rng2m + updatedData.rng2t) / 3);
+    } else if (name === "rng3b" || name === "rng3m" || name === "rng3t") {
+      updatedData.rng3Average = Math.round((updatedData.rng3b + updatedData.rng3m + updatedData.rng3t) / 3);
+    } else if (name === "rng4b" || name === "rng4m" || name === "rng4t") {
+      updatedData.rng4Average = Math.round((updatedData.rng4b + updatedData.rng4m + updatedData.rng4t) / 3);
+    }
+    if (name === "rng1od1" || name === "rng1od2") {
+      updatedData.rng1odAverage = Math.round((updatedData.rng1od1 + updatedData.rng1od2) / 2);
+    } else if (name === "rng2od1" || name === "rng2od2") {
+      updatedData.rng2odAverage = Math.round((updatedData.rng2od1 + updatedData.rng2od2) / 2);
+    } else if (name === "rng3od1" || name === "rng3od2" || name === "rng3od3" || name === "rng3od4") {
+      updatedData.rng3odAverage = Math.round((updatedData.rng3od1 + updatedData.rng3od2 + updatedData.rng3od3 + updatedData.rng3od4) / 4);
+    } else if (name === "rng4od1" || name === "rng4od2" || name === "rng4od3" || name === "rng4od4") {
+      updatedData.rng4odAverage = Math.round((updatedData.rng4od1 + updatedData.rng4od2 + updatedData.rng4od3 + updatedData.rng4od4) / 4);
+    }
+  
+    setEditedData(updatedData);
   };
 
   const handleSave = async () => {
@@ -132,6 +168,10 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
             />
           </label>
           <label>
+            Average: {Math.round((editedData.rng1b + editedData.rng1m + editedData.rng1t) / 3)}
+          </label>
+          <br/>
+          <label>
             Ring 2
           </label>
           <label>
@@ -161,6 +201,10 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
               onChange={handleChange}
             />
           </label>
+          <label>
+            Average: {Math.round((editedData.rng2b + editedData.rng2m + editedData.rng2t) / 3)}
+          </label>
+          <br/>
           <label>
             Ring 3
           </label>
@@ -192,6 +236,10 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
             />
           </label>
           <label>
+            Average: {Math.round((editedData.rng3b + editedData.rng3m + editedData.rng3t) / 3)}
+          </label>
+          <br/>
+          <label>
             Ring 4
           </label>
           <label>
@@ -222,6 +270,10 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
             />
           </label>
           <label>
+            Average: {Math.round((editedData.rng4b + editedData.rng4m + editedData.rng4t) / 3)}
+          </label>
+          <br/>
+          <label>
               Ring 1
           </label>
           <label>
@@ -243,6 +295,10 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
               />
           </label>
           <label>
+            Average: {Math.round((editedData.rng1od1 + editedData.rng1od2) / 2)}
+          </label>
+          <br/>
+          <label>
               Ring 2
           </label>
           <label>
@@ -263,6 +319,10 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
                   onChange={handleChange}
               />
           </label>
+          <label>
+            Average: {Math.round((editedData.rng2od1 + editedData.rng2od2) / 2)}
+          </label>
+          <br/>
           <label>
               Ring 3
           </label>
@@ -303,6 +363,10 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
               />
           </label>
           <label>
+            Average: {Math.round((editedData.rng3od1 + editedData.rng3od2 + editedData.rng3od3 + editedData.rng3od4) / 4)}
+          </label>
+          <br/>
+          <label>
               Ring 4
           </label>
           <label>
@@ -341,6 +405,10 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
                   onChange={handleChange}
               />
           </label>
+          <label>
+            Average: {Math.round((editedData.rng4od1 + editedData.rng4od2 + editedData.rng4od3 + editedData.rng4od4) / 4)}
+          </label>
+          <br/>
           <div className="modal-footer">
             <button className="modal-button" onClick={handleSave}>Save</button>
             <button className="modal-button" onClick={handleCancel}>Cancel</button>
