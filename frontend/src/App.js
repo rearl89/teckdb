@@ -2,12 +2,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home';
 
-import Copper01 from './pages/Copper01';
-import Copper from './pages/Copper';
-import Tin from './pages/Tin';
-import SN_NEXX from './pages/SN_NEXX';
-import ListCopper01 from './pages/ListCopper01';
-import ListSnNexx from './pages/ListSN_NEXX';
+import Copper01 from './pages/copper/Copper01';
+import Copper from './pages/copper/Copper';
+import Tin from './pages/tin/Tin';
+import SN_NEXX from './pages/tin/SN_NEXX';
+import ListCopper01 from './pages/copper/ListCopper01';
+import ListSnNexx from './pages/tin/ListSN_NEXX';
 
 function App() {
   return (

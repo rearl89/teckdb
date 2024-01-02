@@ -1,7 +1,7 @@
 import { useEffect } from "react"
-import { useCopper01Context } from "../hooks/useCopper01Context"
+import { useCopper01Context } from "../../hooks/useCopper01Context"
 
-import ListCopper01Details from '../components/ListCopper01Details'
+import ListCopper01Details from '../../components/ListCopper01Details'
 
 
 

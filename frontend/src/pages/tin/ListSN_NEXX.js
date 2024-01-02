@@ -1,7 +1,7 @@
 import { useEffect } from "react"
-import { useSnNexxContext } from "../hooks/useSnNexxContext"
+import { useSnNexxContext } from "../../hooks/useSnNexxContext"
 
-import ListSnNexxDetails from '../components/ListSnNexxDetails'
+import ListSnNexxDetails from '../../components/ListSnNexxDetails'
 
 
 

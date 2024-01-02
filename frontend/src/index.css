@@ -7,7 +7,12 @@
   --error: #e7195a;
 }
 body {
-  background: #f1f1f1;
+  background-image: url("https://images.unsplash.com/photo-1672307613484-3254a04651fd?q=80&w=3396&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
   margin: 0;
   font-family: "Poppins";
 }
