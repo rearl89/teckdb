@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar"
 
 const Copper = () => {
     return (
-        <div>
+        <div className="copper-background">
             <Navbar />
             <div className="home">
                 <h2>Copper</h2>

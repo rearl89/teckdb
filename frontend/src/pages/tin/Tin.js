@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const Tin = () => {
     return (
-        <div className="page">
+        <div className="tin-background">
             <Navbar />
             <div className="home">
                 <h2>Sn</h2>
