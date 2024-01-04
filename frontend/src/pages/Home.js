@@ -9,8 +9,9 @@ const Home = () => {
             <div className="home">
                 <h2>Home</h2>
                     <div className="homeButtons">
-                        <Link to="/copper" className="linksButton">Cu</Link>
-                        <Link to="/tin" className="linksButton">Sn</Link>
+                        <Link to="/copper" className="CuButton"></Link>
+                        <Link to="/tin" className="SnButton"></Link>
+                        <Link to="/nickel" className="NiButton"></Link>
                     </div>
             </div>
         </div>

@@ -12,7 +12,6 @@ body {
   font-family: "Poppins";
 }
 header {
-  /* From https://css.glass */
   background: rgba(202, 202, 202, 0.66);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -34,7 +33,6 @@ header a {
 }
 
 .home {
-  /* From https://css.glass */
   background: rgba(202, 202, 202, 0.66);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -85,23 +83,38 @@ header a {
   height: 100vh;
 }
 
-.linksButton {
-  background: var(--primary);
+.CuButton {
+  background-image: url("images/copper.PNG");
+  background-size: cover;
   border: 0;
-  color: #fff;
-  padding: 30px;
-  font-family: "Poppins";
-  font-size: xx-large;
   border-radius: 4px;
   margin: 30px;
   cursor: pointer;
-  text-decoration: none;
+}
+
+.SnButton {
+  background-image: url("images/tin.JPG");
+  background-size: cover;
+  border: 0;
+  border-radius: 12px;
+  margin: 30px;
+  cursor: pointer;
+}
+
+.NiButton {
+  background-image: url("images/nickel.JPG");
+  background-size: cover;
+  border: 0;
+  border-radius: 12px;
+  margin: 30px;
+  cursor: pointer;
 }
 
 .homeButtons {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 30% 30% 30%;
   text-align: center;
+  height: 24.5vh;
 }
 
 .copperGrid {
