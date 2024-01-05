@@ -84,37 +84,89 @@ header a {
 }
 
 .CuButton {
-  background-image: url("images/copper.PNG");
-  background-size: cover;
-  border: 0;
-  border-radius: 4px;
-  margin: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d38e00; /* Orange-brown background (Copper's color) */
+  color: #422400; /* Dark brown text */
+  border: 2px solid #654300; /* Darker brown border */
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.CuButton::before {
+  content: "29 Cu";
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.CuButton:hover {
+  background-color: #c27d00;
+  border-color: #543e00;
   cursor: pointer;
 }
+
 
 .SnButton {
-  background-image: url("images/tin.JPG");
-  background-size: cover;
-  border: 0;
-  border-radius: 12px;
-  margin: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #a0a0a0; /* Light gray background (Tin's color) */
+  color: #333333; /* Dark gray text */
+  border: 2px solid #4d4d4d; /* Darker gray border */
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.SnButton::before {
+  content: "50 Sn";
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.SnButton:hover {
+  background-color: #909090;
+  border-color: #3c3c3c;
   cursor: pointer;
 }
 
+
 .NiButton {
-  background-image: url("images/nickel.JPG");
-  background-size: cover;
-  border: 0;
-  border-radius: 12px;
-  margin: 30px;
-  cursor: pointer;
+  display: inline-block; /* Ensure button behavior */
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #e0e0e0; /* Silvery gray background */
+  color: #2e2e2e; /* Dark gray text */
+  border: 2px solid #5c5c5c; /* Dark gray border */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center text and number */
+  font-weight: bold; /* Bold text for emphasis */
+  text-decoration: none; /* Remove default underline for links */
+}
+
+/* Nickel element symbol and number */
+.NiButton::before {
+  content: "28 Ni";
+  display: block; /* Place symbol and number above link text */
+  font-size: 1.2em; /* Slightly larger font for symbol and number */
+  margin-bottom: 5px; /* Add spacing between symbol/number and link text */
+}
+
+/* Hover effect for button-like behavior */
+.NiButton:hover {
+  background-color: #d0d0d0; /* Slightly darker background on hover */
+  border-color: #4c4c4c; /* Slightly darker border on hover */
+  cursor: pointer; /* Indicate interactivity */
 }
 
 .homeButtons {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  text-align: center;
-  height: 24.5vh;
+  width: 350px;
+  margin: 0 auto;
 }
 
 .copperGrid {
