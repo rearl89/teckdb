@@ -21,6 +21,7 @@ header {
 }
 header .container {
   max-width: 1400px;
+  max-height: 50px;
   margin: 0 auto;
   padding: 10px 20px;
   display: flex;
@@ -40,7 +41,7 @@ header a {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(202, 202, 202, 1);
 
-  margin: 20px auto;
+  margin: 40px auto;
   padding: 20px;
   width: 45%;
   left: 25%;
@@ -53,7 +54,7 @@ header a {
 
 .home h2 {
   margin-left: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .home-background {
@@ -109,7 +110,6 @@ header a {
   cursor: pointer;
 }
 
-
 .SnButton {
   display: inline-block;
   padding: 10px 20px;
@@ -136,7 +136,6 @@ header a {
   cursor: pointer;
 }
 
-
 .NiButton {
   display: inline-block; /* Ensure button behavior */
   padding: 10px 20px; /* Adjust padding as needed */
@@ -149,7 +148,6 @@ header a {
   text-decoration: none; /* Remove default underline for links */
 }
 
-/* Nickel element symbol and number */
 .NiButton::before {
   content: "28 Ni";
   display: block; /* Place symbol and number above link text */
@@ -157,11 +155,36 @@ header a {
   margin-bottom: 5px; /* Add spacing between symbol/number and link text */
 }
 
-/* Hover effect for button-like behavior */
 .NiButton:hover {
   background-color: #d0d0d0; /* Slightly darker background on hover */
   border-color: #4c4c4c; /* Slightly darker border on hover */
   cursor: pointer; /* Indicate interactivity */
+}
+
+.InButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #49a99a; /* Teal blue background (Indium's approximate color) */
+  color: #002e2e; /* Dark blue text */
+  border: 2px solid #2e504f; /* Darker blue border */
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.InButton::before {
+  content: "49 In";
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.InButton:hover {
+  background-color: #39928f;
+  border-color: #25403e;
+  cursor: pointer;
 }
 
 .homeButtons {
@@ -172,7 +195,6 @@ header a {
 .copperGrid {
   display: grid;
   grid-template-columns: auto auto auto;
-  
 }
 
 .anode-details {
@@ -207,7 +229,6 @@ header a {
   color: #333;
 }
 
-/* new workout form */
 form {
   width: 75%;
 }

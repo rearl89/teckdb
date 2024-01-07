@@ -12,6 +12,7 @@ const Home = () => {
                         <Link to="/copper" className="CuButton">Copper</Link>
                         <Link to="/tin" className="SnButton">Tin</Link>
                         <Link to="/nickel" className="NiButton">Nickel</Link>
+                        <Link to="/indium" className="InButton">Indium</Link>
                     </div>
             </div>
         </div>
