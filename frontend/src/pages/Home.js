@@ -7,9 +7,9 @@ const Home = () => {
         <div className="home-background">
             <Navbar />
             <div className="home">
-                <h2>Home</h2>
+                <h2>Which product element?</h2>
                     <div className="homeButtons">
-                        <Link to="/copper">
+                        <Link to="/copper" className="CuButton">
                             <div class="element">
                                 <div class="square">
                                     <div class="atomic-number">29</div>
@@ -21,7 +21,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </Link>
-                        <Link to="/tin">
+                        <Link to="/tin" className="SnButton">
                             <div class="element">
                                 <div class="square">
                                     <div class="atomic-number">50</div>
@@ -33,7 +33,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </Link>
-                        <Link to="/nickel">
+                        <Link to="/nickel" className="NiButton">
                         <div class="element">
                                 <div class="square">
                                     <div class="atomic-number">28</div>
@@ -45,7 +45,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </Link>
-                        <Link to="/indium">
+                        <Link to="/indium" className="InButton">
                         <div class="element">
                                 <div class="square">
                                     <div class="atomic-number">49</div>
