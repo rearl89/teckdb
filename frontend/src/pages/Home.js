@@ -13,7 +13,7 @@ const Home = () => {
                             <div class="element">
                                 <div class="square">
                                     <div class="atomic-number">29</div>
-                                        <div class="label">
+                                    <div class="label">
                                         <div class="symbol">Cu</div>
                                         <div class="name">Copper</div>
                                     </div>

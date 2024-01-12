@@ -92,31 +92,21 @@ header a {
   grid-template-columns: auto auto auto auto;
 }
 
-/* .CuButton {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #d38e00;
-  color: #422400;
-  border: 2px solid #654300;
-  border-radius: 5px;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  margin-right: 10px;
+.CuButtons {
+  width: 350px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto;
 }
 
-.CuButton::before {
-  content: "29 Cu";
-  display: block;
-  font-size: 1.2em;
-  margin-bottom: 5px;
+.CuNumber {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 2px;
+  font-size: 10px;
 }
-
-.CuButton:hover {
-  background-color: #c27d00;
-  border-color: #543e00;
-  cursor: pointer;
-} */
 
 .element {
   position: relative;
@@ -215,9 +205,49 @@ header a {
   transform: scale(1.2);
 }
 
-.copperGrid {
-  display: grid;
-  grid-template-columns: auto auto auto;
+.CuP01 {
+  background-color: orange;
+  transition: transform 0.3s ease-in-out;
+}
+
+.CuP01:hover {
+  transform: scale(1.2);
+}
+
+.CuP05 {
+  background-color: rgb(103, 103, 3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.CuP05:hover {
+  transform: scale(1.2);
+}
+
+.CuP09 {
+  background-color: rgb(141, 54, 111);
+  transition: transform 0.3s ease-in-out;
+}
+
+.CuP09:hover {
+  transform: scale(1.2);
+}
+
+.CuP200-3 {
+  background-color: rgb(32, 32, 155);
+  transition: transform 0.3s ease-in-out;
+}
+
+.CuP200-3:hover {
+  transform: scale(1.2);
+}
+
+.CuChemX {
+  background-color: orangered;
+  transition: transform 0.3s ease-in-out;
+}
+
+.CuChemX:hover {
+  transform: scale(1.2);
 }
 
 .anode-details {
