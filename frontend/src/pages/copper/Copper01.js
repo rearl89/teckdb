@@ -25,7 +25,7 @@ const Copper01 = () => {
     }, [dispatch])
 
     return (
-        <div className="page">
+        <div className="copper-background">
             <Navbar />
             <Copper01Form />
             <Link to="/copper01/list" target="_blank" className="listButton">List View</Link>

@@ -108,6 +108,14 @@ header a {
   font-size: 10px;
 }
 
+.SnButtons {
+  width: 350px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto;
+}
+
 .element {
   position: relative;
   font-size: 0.5vw;
@@ -167,7 +175,7 @@ header a {
   opacity: 0;
   text-align: right;
 }
-
+/* Home page buttons */
 .CuButton {
   background-color: rgb(255, 174, 0);
   transform: scale(1);
@@ -204,7 +212,7 @@ header a {
 .InButton:hover {
   transform: scale(1.2);
 }
-
+/* Copper page buttons */
 .CuP01 {
   background-color: orange;
   transition: transform 0.3s ease-in-out;
@@ -247,6 +255,42 @@ header a {
 }
 
 .CuChemX:hover {
+  transform: scale(1.2);
+}
+/* Tin page buttons */
+.SnNexx {
+  background-color: #0056b3;
+  transition: transform 0.3s ease-in-out;
+}
+
+.SnNexx:hover {
+  transform: scale(1.2);
+}
+
+.HotCell {
+  background-color: purple;
+  transition: transform 0.3s ease-in-out;
+}
+
+.HotCell:hover {
+  transform: scale(1.2);
+}
+
+.lam-sn {
+  background-color: orangered;
+  transition: transform 0.3s ease-in-out;
+}
+
+.lam-sn:hover {
+  transform: scale(1.2);
+}
+
+.acm {
+  background-color: red;
+  transition: transform 0.3s ease-in-out;
+}
+
+.acm:hover {
   transform: scale(1.2);
 }
 
@@ -452,14 +496,6 @@ input.error {
 
 .listSnNexx:nth-child(even) {
   background-color: lightgray;
-}
-
-.tin-links {
-  text-decoration: none;
-}
-
-.snLinks {
-  margin-left: 50px;
 }
 
 .modal {

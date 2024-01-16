@@ -15,8 +15,8 @@ const Copper = () => {
                             <div class="square">
                                 <div class="CuNumber">01</div>
                                 <div class="label">
-                                    <div class="symbol">CuP</div>
-                                    <div class="name">300-3</div>
+                                    <div class="symbol">300-3</div>
+                                    <div class="name">CuP</div>
                                 </div>
                                 <div class="atomic-mass">111T1197-01</div>
                             </div>
@@ -27,8 +27,8 @@ const Copper = () => {
                             <div class="square">
                                 <div class="CuNumber">05</div>
                                 <div class="label">
-                                    <div class="symbol">CuP</div>
-                                    <div class="name">300-3</div>
+                                    <div class="symbol">300-3</div>
+                                    <div class="name">CuP</div>
                                 </div>
                                 <div class="atomic-mass">111T1197-05</div>
                             </div>
@@ -39,8 +39,8 @@ const Copper = () => {
                             <div class="square">
                                 <div class="CuNumber">09</div>
                                 <div class="label">
-                                    <div class="symbol">CuP</div>
-                                    <div class="name">300-3</div>
+                                    <div class="symbol">300-3</div>
+                                    <div class="name">CuP</div>
                                 </div>
                                 <div class="atomic-mass">111T1197-09</div>
                             </div>
@@ -50,8 +50,8 @@ const Copper = () => {
                         <div class="element">
                             <div class="square">
                                 <div class="label">
-                                    <div class="symbol">CuP</div>
-                                    <div class="name">200-3</div>
+                                    <div class="symbol">200-3</div>
+                                    <div class="name">CuP</div>
                                 </div>
                                 <div class="atomic-mass">111T1191-01</div>
                             </div>
@@ -61,8 +61,8 @@ const Copper = () => {
                         <div class="element">
                             <div class="square">
                                 <div class="label">
-                                    <div class="symbol">Cu</div>
-                                    <div class="name">ChemX</div>
+                                    <div class="symbol">ChemX</div>
+                                    <div class="name">Cu</div>
                                 </div>
                                 <div class="atomic-mass">K17212328-04</div>
                             </div>
