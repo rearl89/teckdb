@@ -46,7 +46,7 @@ const Home = () => {
                             </div>
                         </Link>
                         <Link to="/indium" className="InButton">
-                        <div class="element">
+                            <div class="element">
                                 <div class="square">
                                     <div class="atomic-number">49</div>
                                     <div class="label">
@@ -54,6 +54,18 @@ const Home = () => {
                                         <div class="name">Indium</div>
                                     </div>
                                     <div class="atomic-mass">114.82</div>
+                                </div>
+                            </div>
+                        </Link>
+                        <Link to="/lead" className="PbButton">
+                            <div class="element">
+                                <div class="square">
+                                    <div class="atomic-number">82</div>
+                                    <div class="label">
+                                        <div class="symbol">Pb</div>
+                                        <div class="name">Lead</div>
+                                    </div>
+                                    <div class="atomic-mass">207.2</div>
                                 </div>
                             </div>
                         </Link>

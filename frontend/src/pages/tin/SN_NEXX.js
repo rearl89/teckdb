@@ -22,7 +22,7 @@ const SN_NEXX = () => {
         fetchSnNexxs()
     }, [dispatch])
     return (
-        <div className="tin-background">
+        <div className="tin-background-fill">
             <Navbar />
             <SnNexxForm />
             <Link to="/sn_nexx/list" target="_blank" className="listButton">List View</Link>

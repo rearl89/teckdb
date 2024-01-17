@@ -52,9 +52,28 @@ header a {
   height: 300px;
 }
 
-.home h2 {
+.cuHome {
+  background: rgba(202, 202, 202, 0.66);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(202, 202, 202, 1);
+
+  margin: 40px auto;
+  padding: 20px;
+  width: 45%;
+  left: 25%;
+  display: inline-block;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   margin-left: 30px;
-  padding-bottom: 20px;
+  height: 60%;
+}
+
+.cuHome h2 {
+  margin: 0 0 20px;
+  text-align: center;
 }
 
 .home-background {
@@ -67,12 +86,21 @@ header a {
 }
 
 .copper-background {
-  background-image: url("https://images.unsplash.com/photo-1672307613484-3254a04651fd?q=80&w=3396&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); 
+  background-image: url("https://images.unsplash.com/photo-1672307613484-3254a04651fd?q=80&w=3396&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 100vh;
+  background-repeat: repeat-y;
+}
+
+.copper-background-fill {
+  background-image: url("https://images.unsplash.com/photo-1672307613484-3254a04651fd?q=80&w=3396&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;
 }
 
 .tin-background {
@@ -82,6 +110,19 @@ header a {
   -o-background-size: cover;
   background-size: cover;
   height: 100vh;
+}
+
+.tin-background-fill {
+  background-image: url("https://images.unsplash.com/photo-1568209865332-a15790aed756?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;
+}
+
+.home h2 {
+  margin: 0 0 20px;
+  text-align: center;
 }
 
 .homeButtons { /* ****************************buttons**************************** */
@@ -212,6 +253,15 @@ header a {
 .InButton:hover {
   transform: scale(1.2);
 }
+
+.PbButton {
+  background-color: rgb(146, 37, 37);
+  transition: transform 0.3s ease-in-out;
+}
+
+.PbButton:hover {
+  transform: scale(1.2);
+}
 /* Copper page buttons */
 .CuP01 {
   background-color: orange;
@@ -240,6 +290,15 @@ header a {
   transform: scale(1.2);
 }
 
+.CuP09DH {
+  background-color: rgb(212, 33, 149);
+  transition: transform 0.3s ease-in-out;
+}
+
+.CuP09DH:hover {
+  transform: scale(1.2);
+}
+
 .CuP200-3 {
   background-color: rgb(32, 32, 155);
   transition: transform 0.3s ease-in-out;
@@ -249,12 +308,66 @@ header a {
   transform: scale(1.2);
 }
 
+.PureCu {
+  background-color: rgb(32, 137, 155);
+  transition: transform 0.3s ease-in-out;
+}
+
+.PureCu:hover {
+  transform: scale(1.2);
+}
+
 .CuChemX {
   background-color: orangered;
   transition: transform 0.3s ease-in-out;
 }
 
 .CuChemX:hover {
+  transform: scale(1.2);
+}
+
+.eeja {
+  background-color: rgb(161, 247, 49);
+  transition: transform 0.3s ease-in-out;
+}
+
+.eeja:hover {
+  transform: scale(1.2);
+}
+
+.cu-ebara {
+  background-color: rgb(0, 255, 179);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cu-ebara:hover {
+  transform: scale(1.2);
+}
+
+.WLP-cu {
+  background-color: rgb(13, 0, 255);
+  transition: transform 0.3s ease-in-out;
+}
+
+.WLP-cu:hover {
+  transform: scale(1.2);
+}
+
+.WLP-cu-Puck {
+  background-color: rgb(225, 0, 255);
+  transition: transform 0.3s ease-in-out;
+}
+
+.WLP-cu-Puck:hover {
+  transform: scale(1.2);
+}
+
+.qorvo {
+  background-color: rgb(46, 16, 5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.qorvo:hover {
   transform: scale(1.2);
 }
 /* Tin page buttons */
