@@ -408,14 +408,17 @@ header a {
 }
 
 .anode-details {
-  background: #fff;
-  border-radius: 4px;
+  background: rgba(202, 202, 202, 0.66);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(202, 202, 202, 1);
   margin: 20px auto;
   padding: 20px;
   width: 45%;
   display: inline-block;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   margin-left: 30px;
 }
 .anode-details h4 {
@@ -440,6 +443,12 @@ header a {
 }
 
 form {
+  background: rgba(202, 202, 202, 0.66);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(202, 202, 202, 1);
   width: 75%;
 }
 label, input {
@@ -491,12 +500,9 @@ form button:hover {
 }
 
 .create {
-  background: #fff;
-  border-radius: 4px;
   margin: 20px auto;
   padding: 20px;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   width: 75%;
   padding-bottom: 60px;
 }
