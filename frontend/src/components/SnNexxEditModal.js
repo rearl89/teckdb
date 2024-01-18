@@ -55,64 +55,67 @@ const SnNexxEditModal = ({ sn_nexx, closeModal }) => {
   return (
     <div className="modal">
       <div className="modal-content">
-        <h2>Edit Sn Nexx</h2>
-        <label>
-          Batch ID:
-          <input
-            type="number"
-            name="batchID"
-            value={editedData.batchID}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Anode #:
-          <input
-            type="number"
-            name="anode"
-            value={editedData.anode}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Weight:
-          <input
-            type="number"
-            name="weight"
-            value={editedData.weight}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Thickness:
-          <input
-            type="number"
-            name="thickness"
-            value={editedData.thickness}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Pass Visual?
-          <input
-            type="text"
-            name="visualPass"
-            value={editedData.visualPass}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Comment:
-          <textarea
-            name="comment"
-            rows="3"
-            value={editedData.comment}
-            onChange={handleChange}
-          />
-        </label>
-        <div className="modal-buttons">
-          <button onClick={handleSave}>Save</button>
-          <button onClick={handleCancel}>Cancel</button>
+        <div className="modal-scrollable">
+          <h2>Edit Sn Nexx</h2>
+          <label>
+            Batch ID:
+            <input
+              type="number"
+              name="batchID"
+              value={editedData.batchID}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Anode #:
+            <input
+              type="number"
+              name="anode"
+              value={editedData.anode}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Weight:
+            <input
+              type="number"
+              name="weight"
+              value={editedData.weight}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Thickness:
+            <input
+              type="number"
+              name="thickness"
+              value={editedData.thickness}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Pass Visual?
+            <input
+              type="text"
+              name="visualPass"
+              value={editedData.visualPass}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Comment:
+            <textarea
+              name="comment"
+              rows="3"
+              value={editedData.comment}
+              onChange={handleChange}
+            />
+          </label>
+          <br/>
+          <div>
+            <button onClick={handleSave}>Save</button>
+            <button onClick={handleCancel}>Cancel</button>
+          </div>
         </div>
       </div>
     </div>
