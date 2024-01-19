@@ -53,28 +53,31 @@ const SnNexxForm = () => {
                     <label>Batch ID:</label>
                 </div>
                 <div>
-                    <input type="number" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
-                </div>
-                <div>
                     <label>Weight:</label>
-                </div>
-                <div>
-                    <input type="number" onChange={(e) => setWeight(e.target.value)} value={weight} step="any" className={emptyFields.includes('weight') ? 'error' : ''} />
                 </div>
                 <div>
                     <label>Thickness:</label>
                 </div>
                 <div>
-                    <input type="number" onChange={(e) => setThickness(e.target.value)} value={thickness} className={emptyFields.includes('thickness') ? 'error' : ''} />
-                </div>
-                <div>
                     <label>Pass Visual?</label>
                 </div>
                 <div>
-                    <input type="text" onChange={(e) => setVisualPass(e.target.value)} value={visualPass} className={emptyFields.includes('pass visual') ? 'error' : ''} />
+                    <label>Comment:</label>
                 </div>
                 <div>
-                    <label>Comment:</label>
+                    <input type="number" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
+                </div>
+                
+                <div>
+                    <input type="number" onChange={(e) => setWeight(e.target.value)} value={weight} step="any" className={emptyFields.includes('weight') ? 'error' : ''} />
+                </div>
+                
+                <div>
+                    <input type="number" onChange={(e) => setThickness(e.target.value)} value={thickness} className={emptyFields.includes('thickness') ? 'error' : ''} />
+                </div>
+                
+                <div>
+                    <input type="text" onChange={(e) => setVisualPass(e.target.value)} value={visualPass} className={emptyFields.includes('pass visual') ? 'error' : ''} />
                 </div>
                 <div>
                     <input type="text" id="comment" onChange={(e) => setComment(e.target.value)} value={comment} className={emptyFields.includes('comment') ? 'error' : ''} />
