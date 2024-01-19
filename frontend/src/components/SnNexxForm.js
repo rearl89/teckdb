@@ -63,7 +63,7 @@ const SnNexxForm = () => {
         dispatch({ type: 'CREATE_SN_NEXX', payload: json });
       }
     }
-    setSelectedNumber(1);
+    window.location.reload();
   };
 
   const inputRows = inputData.map((input, index) => (

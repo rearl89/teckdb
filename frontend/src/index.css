@@ -581,7 +581,7 @@ input.error {
 
 .snFormGrid {
   display: grid;
-  grid-template-columns: 10% 10% 10% 10% 10%;
+  grid-template-columns: 12% 12% 12% 12% 50%;
 }
 
 .snFormGrid label, input {
