@@ -120,10 +120,10 @@ const SnNexxForm = () => {
           ))}
         </select>
       </div>
-
+    <div className="snInputRows">
       {inputRows}
-
-      <button>Submit</button>
+    </div>
+      <button className="snSubmit">Submit</button>
       {error && <div className="error">{error}</div>}
     </form>
   );
