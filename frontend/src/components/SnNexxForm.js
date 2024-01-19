@@ -1,92 +1,132 @@
-import { useState } from "react"
-import { useSnNexxContext } from "../hooks/useSnNexxContext"
+import { useState } from "react";
+import { useSnNexxContext } from "../hooks/useSnNexxContext";
 
 const SnNexxForm = () => {
-    const { dispatch } = useSnNexxContext()
+  const { dispatch } = useSnNexxContext();
 
-    const [batchID, setBatchID] = useState('')
-    const [weight, setWeight] = useState('')
-    const [thickness, setThickness] = useState('')
-    const [visualPass, setVisualPass] = useState('')
-    const [comment, setComment] = useState('')
-    const [error, setError] = useState(null)
-    const [emptyFields, setEmptyFields] = useState([])
+  const initialInputData = {
+    batchID: '',
+    weight: '',
+    thickness: '',
+    visualPass: '',
+    comment: '',
+  };
 
+  const [inputData, setInputData] = useState(Array.from({ length: 1 }, () => ({ ...initialInputData })));
+  const [selectedNumber, setSelectedNumber] = useState(1);
+  const [error, setError] = useState(null);
+  const [emptyFields, setEmptyFields] = useState([]);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        const sn_nexx = {batchID, weight, thickness, visualPass, comment}
+  const handleDropdownChange = (e) => {
+    const number = parseInt(e.target.value, 10);
+    setSelectedNumber(number);
 
-        const response = await fetch('/sn_nexx', {
-            method: 'POST',
-            body: JSON.stringify(sn_nexx),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        const json = await response.json()
+    // Adjust inputData length based on the selected number
+    setInputData(Array.from({ length: number }, () => ({ ...initialInputData })));
+  };
 
-        if (!response.ok) {
-            setError(json.error)
-            setEmptyFields(json.emptyFields)
-        }
-        if (response.ok) {
-            setBatchID('')
-            setWeight('')
-            setThickness('')
-            setVisualPass('')
-            setComment('')
-            setError(null)
-            setEmptyFields([])
-            console.log('new anode added', json)
-            dispatch({type: 'CREATE_SN_NEXX', payload: json})
-        }
+  const handleInputChange = (e, index, field) => {
+    const newInputData = [...inputData];
+    newInputData[index][field] = e.target.value;
+    setInputData(newInputData);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    for (let i = 0; i < selectedNumber; i++) {
+      const sn_nexx = inputData[i];
+
+      const response = await fetch('/sn_nexx', {
+        method: 'POST',
+        body: JSON.stringify(sn_nexx),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      const json = await response.json();
+
+      if (!response.ok) {
+        setError(json.error);
+        setEmptyFields(json.emptyFields);
+      }
+      if (response.ok) {
+        // Clear the corresponding input fields on successful submission
+        const newInputData = [...inputData];
+        newInputData[i] = { ...initialInputData };
+        setInputData(newInputData);
+
+        setError(null);
+        setEmptyFields([]);
+        console.log('new anode added', json);
+        dispatch({ type: 'CREATE_SN_NEXX', payload: json });
+      }
     }
+    setSelectedNumber(1);
+  };
 
-    return (
-        <form className="create" onSubmit={handleSubmit}>
-            <div>
-                <h2>Sn NEXX</h2>
-            </div>
-            <div className="snFormGrid">
-                <div>
-                    <label>Batch ID:</label>
-                </div>
-                <div>
-                    <label>Weight:</label>
-                </div>
-                <div>
-                    <label>Thickness:</label>
-                </div>
-                <div>
-                    <label>Pass Visual?</label>
-                </div>
-                <div>
-                    <label>Comment:</label>
-                </div>
-                <div>
-                    <input type="number" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
-                </div>
-                
-                <div>
-                    <input type="number" onChange={(e) => setWeight(e.target.value)} value={weight} step="any" className={emptyFields.includes('weight') ? 'error' : ''} />
-                </div>
-                
-                <div>
-                    <input type="number" onChange={(e) => setThickness(e.target.value)} value={thickness} className={emptyFields.includes('thickness') ? 'error' : ''} />
-                </div>
-                
-                <div>
-                    <input type="text" onChange={(e) => setVisualPass(e.target.value)} value={visualPass} className={emptyFields.includes('pass visual') ? 'error' : ''} />
-                </div>
-                <div>
-                    <input type="text" id="comment" onChange={(e) => setComment(e.target.value)} value={comment} className={emptyFields.includes('comment') ? 'error' : ''} />
-                </div>
-            </div>
-            <button>Submit</button>
-            {error && <div className="error">{error}</div>}
-        </form>
-    )
-}
+  const inputRows = inputData.map((input, index) => (
+    <div className="snFormGrid" key={index}>
+      <input
+        type="number"
+        onChange={(e) => handleInputChange(e, index, 'batchID')}
+        value={input.batchID}
+        className={emptyFields.includes("batchID") ? "error" : ""}
+        placeholder="Batch ID"
+      />
+      <input
+        type="number"
+        onChange={(e) => handleInputChange(e, index, 'weight')}
+        value={input.weight}
+        step="any"
+        className={emptyFields.includes("weight") ? "error" : ""}
+        placeholder="Weight"
+      />
+      <input
+        type="number"
+        onChange={(e) => handleInputChange(e, index, 'thickness')}
+        value={input.thickness}
+        className={emptyFields.includes("thickness") ? "error" : ""}
+        placeholder="Thickness"
+      />
+      <input
+        type="text"
+        onChange={(e) => handleInputChange(e, index, 'visualPass')}
+        value={input.visualPass}
+        className={emptyFields.includes("pass visual") ? "error" : ""}
+        placeholder="Pass Visual?"
+      />
+      <input
+        type="text"
+        onChange={(e) => handleInputChange(e, index, 'comment')}
+        value={input.comment}
+        className={emptyFields.includes("comment") ? "error" : ""}
+        placeholder="Comment"
+      />
+    </div>
+  ));
 
-export default SnNexxForm
+  return (
+    <form className="create" onSubmit={handleSubmit}>
+      <div>
+        <h2>Sn NEXX</h2>
+        <label>How many anodes are being tested?</label>
+        <select value={selectedNumber} onChange={handleDropdownChange}>
+          {Array.from({ length: 48 }, (_, index) => (
+            <option key={index} value={index + 1}>
+              {index + 1}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {inputRows}
+
+      <button>Submit</button>
+      {error && <div className="error">{error}</div>}
+    </form>
+  );
+};
+
+export default SnNexxForm;
