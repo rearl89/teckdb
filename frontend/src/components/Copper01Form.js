@@ -6,7 +6,7 @@ const Copper01Form = () => {
     const { dispatch } = useCopper01Context()
 
     const [batchID, setBatchID] = useState('')
-    const [set, setSet] = useState('')
+    // const [set, setSet] = useState('') added automatically through code starting on line 7 in copper01Model.js
     const [postPass, setPostPass] = useState('')
     const [spongePass, setSpongePass] = useState('')
     const [rng1b, setRng1b] = useState('')
@@ -39,7 +39,7 @@ const Copper01Form = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const copper01 = {batchID, set, postPass, spongePass, rng1b, rng1m, rng1t, rng2b, rng2m, rng2t, rng3b, rng3m, rng3t, rng4b, rng4m, rng4t, rng1od1, rng1od2, rng2od1, rng2od2, rng3od1, rng3od2, rng3od3, rng3od4, rng4od1, rng4od2, rng4od3, rng4od4}
+        const copper01 = {batchID, /*set, added automatically through code starting on line 7 in copper01Model.js*/ postPass, spongePass, rng1b, rng1m, rng1t, rng2b, rng2m, rng2t, rng3b, rng3m, rng3t, rng4b, rng4m, rng4t, rng1od1, rng1od2, rng2od1, rng2od2, rng3od1, rng3od2, rng3od3, rng3od4, rng4od1, rng4od2, rng4od3, rng4od4}
 
         const response = await fetch('/copper01', {
             method: 'POST',
@@ -56,7 +56,7 @@ const Copper01Form = () => {
         }
         if (response.ok) {
             setBatchID('')
-            setSet('')
+            // setSet('') added automatically through code starting on line 7 in copper01Model.js
             setPostPass('')
             setSpongePass('')
             setRng1b('')
@@ -103,12 +103,12 @@ const Copper01Form = () => {
                 <div>
                     <input type="text" onChange={(e) => setBatchID(e.target.value)} value={batchID} className={emptyFields.includes('batchID') ? 'error' : ''} />
                 </div>
-                <div>    
-                    <label className="ring">&emsp;&ensp;Set #:</label>
-                </div>
-                <div>
-                    <input type="number" onChange={(e) => setSet(e.target.value)} value={set} className={emptyFields.includes('set') ? 'error' : ''} />
-                </div>
+                {/* <div>    
+                    <label className="ring">&emsp;&ensp;Set #:</label> added automatically through code starting on line 7 in copper01Model.js
+                </div> */}
+                {/* <div>
+                    <input type="number" onChange={(e) => setSet(e.target.value)} value={set} className={emptyFields.includes('set') ? 'error' : ''} /> added automatically through code starting on line 7 in copper01Model.js
+                </div> */}
                 <div>
                     <label className="post">&ensp;Pass Post?</label>
                 </div>

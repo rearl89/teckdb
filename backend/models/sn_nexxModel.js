@@ -4,9 +4,9 @@ const Schema = mongoose.Schema
 
 const sn_nexxSchema = new Schema({
     batchID: {type: Number, required: true},
-    anode: {type: String, default: function() {
+    anode: {type: Number, default: function() {
         const result = this.batchID % 100
-        return (result.toString().padStart(2, '0'))
+        return result
     }},
     weight: {type: Number, required: true},
     thickness: {type: Number, required: false},

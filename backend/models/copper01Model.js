@@ -4,7 +4,15 @@ const Schema = mongoose.Schema
 
 const copper01Schema = new Schema({
     batchID: {type: String, required: true},
-    set: {type: Number, required: true},
+    set: {type: Number, default: function() {
+        const length = this.batchID.length;
+
+        if (length === 8 || length === 9) {
+            const lastDigitsCount = (length === 8) ? 2 : 3;
+            result = parseInt(this.batchID.slice(-lastDigitsCount));
+            return result;
+        }
+    }},
     postPass: {type: String, required: true},
     spongePass: {type: String, required: true},
     rng1b: {type: Number, required: true},
