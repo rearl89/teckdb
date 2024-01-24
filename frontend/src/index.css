@@ -439,9 +439,6 @@ header a {
   color: #333;
 }
 
-form {
-  width: 75%;
-}
 label, input {
   display: inline;
 }
@@ -480,10 +477,7 @@ form button:hover {
 .formHeader {
   display: flex;
 }
-.formGrid {
-  display: grid;
-  grid-template-columns: 12% 10% 10% 10% 12% 10% 13% 10%;
-}
+
 #anotherPage {
   height: 25px;
   position: absolute;
@@ -502,6 +496,21 @@ form button:hover {
   padding-bottom: 60px;
 }
 
+.cu01Form {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  width: 75%;
+  padding-bottom: 60px;
+}
+.cuFormGrid {
+  display: grid;
+  grid-template-columns: 8% 5% 5% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
+  overflow: auto;
+}
 div.error {
   padding: 10px;
   background: #ffefef;
