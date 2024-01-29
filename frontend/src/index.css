@@ -48,7 +48,6 @@ header a {
   display: inline-block;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-  margin-left: 30px;
   height: 300px;
 }
 
@@ -478,12 +477,12 @@ form button:hover {
   display: flex;
 }
 
-#anotherPage {
+/* #anotherPage {
   height: 25px;
   position: absolute;
   right: 20px;
   top: 20px;
-}
+} */
 
 .create {
   background: #fff;
@@ -505,12 +504,16 @@ form button:hover {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
   width: 75%;
   padding-bottom: 60px;
+  
 }
 .cuFormGrid {
   display: grid;
   grid-template-columns: 8% 5% 5% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%;
+}
+.cuInputRows {
   overflow: auto;
 }
+
 div.error {
   padding: 10px;
   background: #ffefef;
