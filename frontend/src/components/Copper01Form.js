@@ -298,7 +298,9 @@ const Copper01Form = () => {
           ))}
         </select>
       </div>
+      <div className="cuInputSize">
       <div className="cuInputRows">{inputRows}</div>
+      </div>
       <button className="cuSubmit">Submit</button>
       {error && <div className="error">{error}</div>}
     </form>
