@@ -80,7 +80,7 @@ const Copper = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/cu-chemexx" className="CuChemX">
+                    <Link to="/cuChemX" className="CuChemX">
                         <div class="element">
                             <div class="square">
                                 <div class="label">

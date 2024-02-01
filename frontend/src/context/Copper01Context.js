@@ -1,6 +1,6 @@
 import { createContext, useReducer } from "react";
 
-export const Copper01Context = createContext()
+export const Copper01Context = createContext();
 
 export const copper01Reducer = (state, action) => {
     switch (action.type) {
