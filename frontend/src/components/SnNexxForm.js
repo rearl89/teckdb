@@ -112,7 +112,7 @@ const SnNexxForm = () => {
   return (
     <form className="create" onSubmit={handleSubmit}>
       <div>
-        <h2>Sn NEXX</h2>
+        <h2 className="formHeader">Sn NEXX</h2>
         <label>How many anodes are being tested?</label>
         <select value={selectedNumber} onChange={handleDropdownChange}>
           {Array.from({ length: 48 }, (_, index) => (

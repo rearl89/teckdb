@@ -15,6 +15,55 @@ form button {
     background: rgb(68, 185, 138);
   }
 
+  .edit-button {
+    background: var(--primary);
+    border: 0;
+    color: #fff;
+    margin-top: 10px;
+    font-family: "Poppins";
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .edit-button:hover {
+    background: rgb(68, 185, 138);
+  }  
+
+  .listButton {
+    background: var(--primary);
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    font-family: "Poppins";
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 30px;
+  }
+  
+  .listButton:hover {
+    background: rgb(68, 185, 138);
+  }
+
+  /* Styles for the "Save" and "Cancel" buttons */
+.modal-button {
+    padding: 10px 20px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-button:hover {
+    background: rgb(68, 185, 138);
+  }
+
+.cuSubmit {
+    margin-top: 10px;
+}
+
 .homeButtons { /* ****************************buttons**************************** */
     width: 350px;
     margin: 0 auto;

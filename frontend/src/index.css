@@ -98,7 +98,7 @@ header a {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -116,7 +116,7 @@ header a {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -178,6 +178,7 @@ input {
 
 .formHeader {
   display: flex;
+  color: var(--primary);
 }
 
 .create {
@@ -208,7 +209,8 @@ input {
 }
 
 .cuInputSize {
-  overflow-x: auto;
+  overflow-x: scroll;
+  /* scrollbar-color: grey transparent; unecessary for now, may add later if decide to make forms glass */
 }
 
 .cuInputRows {
@@ -259,37 +261,6 @@ input.error {
 
 .listContainer:nth-child(even) {
   background-color: lightgray;
-}
-
-.listButton {
-  background: var(--primary);
-  border: 0;
-  color: #fff;
-  padding: 10px;
-  font-family: "Poppins";
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-left: 30px;
-}
-
-.listButton:hover {
-  background: rgb(68, 185, 138);
-}
-
-.edit-button {
-  background: var(--primary);
-  border: 0;
-  color: #fff;
-  margin-top: 10px;
-  font-family: "Poppins";
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.edit-button:hover {
-  background: rgb(68, 185, 138);
 }
 
 .snFormGrid {
@@ -367,18 +338,4 @@ input::placeholder {
   border-top: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
-}
-
-/* Styles for the "Save" and "Cancel" buttons */
-.modal-button {
-  padding: 10px 20px;
-  background: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.modal-button:hover {
-  background: #0056b3;
 }
