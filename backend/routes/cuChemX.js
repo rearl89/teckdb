@@ -1,16 +1,16 @@
 const express = require('express')
-const { getSn_Nexxs, getSn_Nexx, createSn_Nexx, deleteSn_Nexx, updateSn_Nexx } = require('../controllers/sn_nexxController')
+const { getCuChemXs, getCuChemX, createCuChemX, deleteCuChemX, updateCuChemX } = require('../controllers/cuChemXController')
 
 const router = express.Router()
 
-router.get('/', getSn_Nexxs)
+router.get('/', getCuChemXs)
 
-router.get('/:id', getSn_Nexx)
+router.get('/:id', getCuChemX)
 
-router.post('/', createSn_Nexx)
+router.post('/', createCuChemX)
 
-router.delete('/:id', deleteSn_Nexx)
+router.delete('/:id', deleteCuChemX)
 
-router.patch('/:id', updateSn_Nexx)
+router.patch('/:id', updateCuChemX)
 
 module.exports = router
