@@ -61,8 +61,6 @@ const CuChemXForm = () => {
         setEmptyFields([]);
         console.log('new anode added', json);
         dispatch({ type: 'CREATE_CUCHEMX', payload: json });
-        
-        window.location.reload();
       }
     }
     

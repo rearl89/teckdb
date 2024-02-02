@@ -61,8 +61,6 @@ const SnNexxForm = () => {
         setEmptyFields([]);
         console.log('new anode added', json);
         dispatch({ type: 'CREATE_SN_NEXX', payload: json });
-        
-        window.location.reload();
       }
     }
     

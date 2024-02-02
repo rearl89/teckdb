@@ -47,7 +47,7 @@ const CuChemXDetails = ({cuChemX}) => {
             <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
             
             {/* modal code */}
-            <button onClick={handleEditClick}>Edit</button>
+            <button className="edit-button" onClick={handleEditClick}>Edit</button>
             {isModalOpen && (
                 <CuChemXEditModal
                     cuChemX={cuChemX}

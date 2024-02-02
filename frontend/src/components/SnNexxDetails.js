@@ -47,7 +47,7 @@ const SnNexxDetails = ({sn_nexx}) => {
             <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
             
             {/* modal code */}
-            <button onClick={handleEditClick}>Edit</button>
+            <button className="edit-button" onClick={handleEditClick}>Edit</button>
             {isModalOpen && (
                 <SnNexxEditModal
                     sn_nexx={sn_nexx}
