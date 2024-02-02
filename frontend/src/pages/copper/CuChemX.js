@@ -4,6 +4,7 @@ import { useCuChemXContext } from "../../hooks/useCuChemXContext";
 
 import Navbar from "../../components/Navbar";
 import CuChemXForm from "../../components/copper/CuChemXForm";
+import CuChemXDetails from "../../components/copper/CuChemXDetails";
 
 
 const CuChemX = () => {
@@ -28,8 +29,8 @@ const CuChemX = () => {
             <CuChemXForm />
             {/* <Link to="/cuChemX/list" target="_blank" className="listButton">List View</Link> */}
             <div className="cuChemXs">
-                {cuChemXs && cuChemXs.map(CuChemX => (
-                    {/* <CuChemXDetails cuChemX={cuChemX} key={cuChemX._id} /> */}
+                {cuChemXs && cuChemXs.map(cuChemX => (
+                    <CuChemXDetails cuChemX={cuChemX} key={cuChemX._id} />
                 ))}
             </div> 
         </div>
