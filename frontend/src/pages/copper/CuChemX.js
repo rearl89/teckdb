@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useCuChemXContext } from "../../hooks/useCuChemXContext";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import Navbar from "../../components/Navbar";
+import CuChemXForm from "../../components/copper/CuChemXForm";
 
 
 const CuChemX = () => {
@@ -24,7 +25,7 @@ const CuChemX = () => {
     return (
         <div className="copper-background-fill">
             <Navbar />
-            {/* <CuChemXForm /> */}
+            <CuChemXForm />
             {/* <Link to="/cuChemX/list" target="_blank" className="listButton">List View</Link> */}
             <div className="cuChemXs">
                 {cuChemXs && cuChemXs.map(CuChemX => (
