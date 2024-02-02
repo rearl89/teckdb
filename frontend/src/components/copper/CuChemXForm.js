@@ -71,7 +71,7 @@ const CuChemXForm = () => {
   const inputRows = inputData.map((input, index) => (
     <div className="snFormGrid" key={index}>
       <input
-        type="string"
+        type="text"
         onChange={(e) => handleInputChange(e, index, 'batchID')}
         value={input.batchID}
         className={emptyFields.includes("batchID") ? "error" : ""}

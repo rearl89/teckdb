@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useCuChemXContext } from "../../hooks/useCuChemXContext"
-// import CuChemXEditModal from "./CuChemXEditModal"
+import CuChemXEditModal from "./CuChemXEditModal"
 import format from 'date-fns/format'
 
 const CuChemXDetails = ({cuChemX}) => {
@@ -48,12 +48,12 @@ const CuChemXDetails = ({cuChemX}) => {
             
             {/* modal code */}
             <button onClick={handleEditClick}>Edit</button>
-            {/* {isModalOpen && (
+            {isModalOpen && (
                 <CuChemXEditModal
                     cuChemX={cuChemX}
                     closeModal={closeModal}
                 />
-            )} */}
+            )}
             
         </div>
     )
