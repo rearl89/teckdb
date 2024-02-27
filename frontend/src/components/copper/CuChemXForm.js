@@ -54,7 +54,7 @@ const CuChemXForm = () => {
       if (response.ok) {
         // Clear the corresponding input fields on successful submission
         const newInputData = [...inputData];
-        newInputData[i] = { ...initialInputData };
+        newInputData[i] = { ...initialInputData }; //this doesnt seem to reset the inputData to 1**************************
         setInputData(newInputData);
 
         setError(null);

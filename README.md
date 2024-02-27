@@ -15,7 +15,7 @@ Features still to add:
 -An option to import to a trest traveler to print out
 -A search feature?
 -Blur the background image to hide the fact that the image repeats as you scroll down on the testing pages
--download the background images to reduce loadtime
+<!-- -download the background images to reduce loadtime -->
 
 
 Known Bugs:

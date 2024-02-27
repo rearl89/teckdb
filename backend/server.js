@@ -2,9 +2,9 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
-const copper01Routes = require('./routes/copper01')
-const cuChemXRoutes = require('./routes/cuChemX')
-const sn_nexxRoutes = require('./routes/sn_nexx')
+const copper01Routes = require('./copper/routes/copper01')
+const cuChemXRoutes = require('./copper/routes/cuChemX')
+const sn_nexxRoutes = require('./tin/routes/sn_nexx')
 
 const app = express()
 
