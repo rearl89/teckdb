@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { useCuChemXContext } from "../../hooks/useCuChemXContext";
+import { useCuChemXContext } from "../hooks/useCuChemXContext";
 // import { Link } from "react-router-dom";
 
-import Navbar from "../../components/Navbar";
-import CuChemXForm from "../../components/copper/CuChemXForm";
-import CuChemXDetails from "../../components/copper/CuChemXDetails";
+import Navbar from "../../homePage/Navbar";
+import CuChemXForm from "../components/CuChemXForm";
+import CuChemXDetails from "../components/CuChemXDetails";
 
 
 const CuChemX = () => {

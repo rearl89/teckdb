@@ -1,10 +1,10 @@
 import { useEffect } from "react"
-import { useSnNexxContext } from "../../hooks/useSnNexxContext"
+import { useSnNexxContext } from "../hooks/useSnNexxContext"
 import { Link } from "react-router-dom"
 
-import Navbar from "../../components/Navbar"
-import SnNexxDetails from "../../components/SnNexxDetails"
-import SnNexxForm from "../../components/SnNexxForm"
+import Navbar from "../../homePage/Navbar"
+import SnNexxDetails from "../components/SnNexxDetails"
+import SnNexxForm from "../components/SnNexxForm"
 
 const SN_NEXX = () => {
     const {sn_nexxs, dispatch} = useSnNexxContext()

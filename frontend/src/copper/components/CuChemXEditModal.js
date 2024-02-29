@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useCuChemXContext } from "../../hooks/useCuChemXContext";
+import { useCuChemXContext } from "../hooks/useCuChemXContext";
 
 const CuChemXEditModal = ({ cuChemX, closeModal }) => {
   const { dispatch } = useCuChemXContext();

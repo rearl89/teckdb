@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Home from './pages/Home';
+import Home from './homePage/Home';
 
-import Copper from './pages/copper/Copper';
-import Tin from './pages/tin/Tin';
-import Copper01 from './pages/copper/Copper01';
-import CuChemX from './pages/copper/CuChemX';
-import SN_NEXX from './pages/tin/SN_NEXX';
-import ListCopper01 from './pages/copper/ListCopper01';
-import ListSnNexx from './pages/tin/ListSN_NEXX';
+import Copper from './copper/pages/Copper';
+import Tin from './tin/pages/Tin';
+import Copper01 from './copper/pages/Copper01';
+import CuChemX from './copper/pages/CuChemX';
+import SN_NEXX from './tin/pages/SN_NEXX';
+import ListCopper01 from './copper/pages/ListCopper01';
+import ListSnNexx from './tin/pages/ListSN_NEXX';
 
 function App() {
   return (

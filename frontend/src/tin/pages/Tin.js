@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar"
+import Navbar from "../../homePage/Navbar"
 import { Link } from "react-router-dom"
 
 const Tin = () => {
