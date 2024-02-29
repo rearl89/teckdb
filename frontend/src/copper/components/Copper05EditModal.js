@@ -1,47 +1,35 @@
 import { useState } from "react";
-import { useCopper01Context } from "../hooks/useCopper01Context";
+import { useCopper05Context } from "../hooks/useCopper05Context";
 
-const Copper01EditModal = ({ copper01, closeModal }) => {
-  const { dispatch } = useCopper01Context();
+const Copper05EditModal = ({ copper05, closeModal }) => {
+  const { dispatch } = useCopper05Context();
 
   // State to track the edited values
   const [editedData, setEditedData] = useState({
-    batchID: copper01.batchID,
-    set: copper01.set,
-    postPass: copper01.postPass,
-    spongePass: copper01.spongePass,
-    rng1b: copper01.rng1b,
-    rng1m: copper01.rng1m,
-    rng1t: copper01.rng1t,
-    rng1Average: copper01.rng1Average,
-    rng2b: copper01.rng2b,
-    rng2m: copper01.rng2m,
-    rng2t: copper01.rng2t,
-    rng2Average: copper01.rng2Average,
-    rng3b: copper01.rng3b,
-    rng3m: copper01.rng3m,
-    rng3t: copper01.rng3t,
-    rng3Average: copper01.rng3Average,
-    rng4b: copper01.rng4b,
-    rng4m: copper01.rng4m,
-    rng4t: copper01.rng4t,
-    rng4Average: copper01.rng4Average,
-    rng1od1: copper01.rng1od1,
-    rng1od2: copper01.rng1od2,
-    rng1odAverage: copper01.rng1odAverage,
-    rng2od1: copper01.rng2od1,
-    rng2od2: copper01.rng2od2,
-    rng2odAverage: copper01.rng2odAverage,
-    rng3od1: copper01.rng3od1,
-    rng3od2: copper01.rng3od2,
-    rng3od3: copper01.rng3od3,
-    rng3od4: copper01.rng3od4,
-    rng3odAverage: copper01.rng3odAverage,
-    rng4od1: copper01.rng4od1,
-    rng4od2: copper01.rng4od2,
-    rng4od3: copper01.rng4od3,
-    rng4od4: copper01.rng4od4,
-    rng4odAverage: copper01.rng4odAverage
+    batchID: copper05.batchID,
+    set: copper05.set,
+    postPass: copper05.postPass,
+    spongePass: copper05.spongePass,
+    rng1b: copper05.rng1b,
+    rng1m: copper05.rng1m,
+    rng1t: copper05.rng1t,
+    rng1Average: copper05.rng1Average,
+    rng2b: copper05.rng2b,
+    rng2m: copper05.rng2m,
+    rng2t: copper05.rng2t,
+    rng2Average: copper05.rng2Average,
+    rng3b: copper05.rng3b,
+    rng3m: copper05.rng3m,
+    rng3t: copper05.rng3t,
+    rng3Average: copper05.rng3Average,
+    rng4b: copper05.rng4b,
+    rng4m: copper05.rng4m,
+    rng4t: copper05.rng4t,
+    rng4Average: copper05.rng4Average,
+    rng1coat: copper05.rng1coat,
+    rng2coat: copper05.rng2coat,
+    rng3coat: copper05.rng3coat,
+    rng4coat: copper05.rng4coat
   });
 
   // const handleChange = (e) => {
@@ -67,15 +55,7 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
     } else if (name === "rng4b" || name === "rng4m" || name === "rng4t") {
       updatedData.rng4Average = Math.round((updatedData.rng4b + updatedData.rng4m + updatedData.rng4t) / 3);
     }
-    if (name === "rng1od1" || name === "rng1od2") {
-      updatedData.rng1odAverage = Math.round((updatedData.rng1od1 + updatedData.rng1od2) / 2);
-    } else if (name === "rng2od1" || name === "rng2od2") {
-      updatedData.rng2odAverage = Math.round((updatedData.rng2od1 + updatedData.rng2od2) / 2);
-    } else if (name === "rng3od1" || name === "rng3od2" || name === "rng3od3" || name === "rng3od4") {
-      updatedData.rng3odAverage = Math.round((updatedData.rng3od1 + updatedData.rng3od2 + updatedData.rng3od3 + updatedData.rng3od4) / 4);
-    } else if (name === "rng4od1" || name === "rng4od2" || name === "rng4od3" || name === "rng4od4") {
-      updatedData.rng4odAverage = Math.round((updatedData.rng4od1 + updatedData.rng4od2 + updatedData.rng4od3 + updatedData.rng4od4) / 4);
-    }
+    
   
     setEditedData(updatedData);
   };
@@ -83,7 +63,7 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
   const handleSave = async () => {
     try {
       // Send the updated data to the server
-      const response = await fetch(`/copper01/${copper01._id}`, {
+      const response = await fetch(`/copper05/${copper05._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -94,8 +74,8 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
       const json = await response.json();
 
       if (response.ok) {
-        // Dispatch the "UPDATE_COPPER01" action with the updated copper01 data
-        dispatch({ type: "UPDATE_COPPER01", payload: json });
+        // Dispatch the "UPDATE_COPPER05" action with the updated copper05 data
+        dispatch({ type: "UPDATE_COPPER05", payload: json });
         window.location.reload();
       } else {
         console.error("Error updating data:", json.error);
@@ -114,9 +94,9 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
     <div className="modal">
       <div className="modal-content">
         <div className="modal-scrollable">
-          <h2>Edit Copper 01</h2>
+          <h2>Edit Copper 05</h2>
           <label>
-            <strong>Batch ID: {copper01.batchID} &emsp;&emsp;&emsp;&emsp; Set #: {copper01.set}</strong>
+            <strong>Batch ID: {copper05.batchID} &emsp;&emsp;&emsp;&emsp; Set #: {copper05.set}</strong>
           </label>
           <hr/>
           <label>
@@ -277,136 +257,52 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
               Ring 1
           </label>
           <label>
-              OD1:
+              Coating:
               <input
                   type="number"
-                  name="rng1od1"
-                  value={editedData.rng1od1}
+                  name="rng1coat"
+                  value={editedData.rng1coat}
                   onChange={handleChange}
               />
-          </label>
-          <label>
-              OD2:
-              <input
-                  type="number"
-                  name="rng1od2"
-                  value={editedData.rng1od2}
-                  onChange={handleChange}
-              />
-          </label>
-          <label>
-            Average: {Math.round((editedData.rng1od1 + editedData.rng1od2) / 2)}
           </label>
           <br/>
           <label>
               Ring 2
           </label>
           <label>
-              OD1:
+              Coating:
               <input
                   type="number"
-                  name="rng2od1"
-                  value={editedData.rng2od1}
+                  name="rng2coat"
+                  value={editedData.rng2coat}
                   onChange={handleChange}
               />
-          </label>
-          <label>
-              OD2:
-              <input
-                  type="number"
-                  name="rng2od2"
-                  value={editedData.rng2od2}
-                  onChange={handleChange}
-              />
-          </label>
-          <label>
-            Average: {Math.round((editedData.rng2od1 + editedData.rng2od2) / 2)}
           </label>
           <br/>
           <label>
               Ring 3
           </label>
           <label>
-              OD1:
+              Coating:
               <input
                   type="number"
-                  name="rng3od1"
-                  value={editedData.rng3od1}
+                  name="rng3coat"
+                  value={editedData.rng3coat}
                   onChange={handleChange}
               />
-          </label>
-          <label>
-              OD2:
-              <input
-                  type="number"
-                  name="rng3od2"
-                  value={editedData.rng3od2}
-                  onChange={handleChange}
-              />
-          </label>
-          <label>
-              OD3:
-              <input
-                  type="number"
-                  name="rng3od3"
-                  value={editedData.rng3od3}
-                  onChange={handleChange}
-              />
-          </label>
-          <label>
-              OD4:
-              <input
-                  type="number"
-                  name="rng3od4"
-                  value={editedData.rng3od4}
-                  onChange={handleChange}
-              />
-          </label>
-          <label>
-            Average: {Math.round((editedData.rng3od1 + editedData.rng3od2 + editedData.rng3od3 + editedData.rng3od4) / 4)}
           </label>
           <br/>
           <label>
               Ring 4
           </label>
           <label>
-              OD1:
+              Coating:
               <input
                   type="number"
-                  name="rng4od1"
-                  value={editedData.rng4od1}
+                  name="rng4coat"
+                  value={editedData.rng4coat}
                   onChange={handleChange}
               />
-          </label>
-          <label>
-              OD2:
-              <input
-                  type="number"
-                  name="rng4od2"
-                  value={editedData.rng4od2}
-                  onChange={handleChange}
-              />
-          </label>
-          <label>
-              OD3:
-              <input
-                  type="number"
-                  name="rng4od3"
-                  value={editedData.rng4od3}
-                  onChange={handleChange}
-              />
-          </label>
-          <label>
-              OD4:
-              <input
-                  type="number"
-                  name="rng4od4"
-                  value={editedData.rng4od4}
-                  onChange={handleChange}
-              />
-          </label>
-          <label>
-            Average: {Math.round((editedData.rng4od1 + editedData.rng4od2 + editedData.rng4od3 + editedData.rng4od4) / 4)}
           </label>
           <br/>
           <div className="modal-footer">
@@ -419,4 +315,4 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
   );
 };
 
-export default Copper01EditModal;
+export default Copper05EditModal;
