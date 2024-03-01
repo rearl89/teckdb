@@ -340,3 +340,29 @@ input::placeholder {
   justify-content: space-between;
 }
 
+.anode-details2 {
+  background: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+.anode-details2 p {
+  margin: 0;
+  font-size: 1vw;
+  color: #555;
+}
+.anode-details2 span {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 2px;
+  border-radius: 50%;
+  color: #333;
+}

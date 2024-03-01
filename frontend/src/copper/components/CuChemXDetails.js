@@ -43,21 +43,18 @@ const CuChemXDetails = ({cuChemX}) => {
     }
 
     return (
-        <div className="anode-details">
-            <div>
-                <h4>
-                    <strong>Batch ID:</strong> {cuChemX.batchID} &emsp;&emsp;
-                    <strong>Anode #:</strong> {cuChemX.anode} &emsp;&emsp;
-                    <strong>Date:</strong> {format(new Date(cuChemX.createdAt), 'MM-dd-yyyy')}
-                </h4>
+        <div className="anode-details2">
                 <div>
-                    <p><strong>Weight:</strong> {cuChemX.weight} &emsp;&emsp;&emsp;&emsp;&emsp;
-                    <strong>Thickness:</strong> {cuChemX.thickness} &emsp;&emsp;&emsp;&emsp;
-                    <strong>Pass Visual? </strong> {cuChemX.visualPass}</p>
+                    <hr/>
+                    <p>
+                        <strong>Batch ID:</strong> {cuChemX.batchID} &emsp;&emsp;
+                        <strong>Anode #:</strong> {cuChemX.anode} &emsp;&emsp;<strong>Date:</strong> {format(new Date(cuChemX.createdAt), 'MM-dd-yyyy')}&emsp;&emsp;&emsp;&emsp;
+                        <strong>Weight:</strong> {cuChemX.weight} &emsp;&emsp;&emsp;&emsp;&emsp;
+                        <strong>Thickness:</strong> {cuChemX.thickness} &emsp;&emsp;&emsp;&emsp;
+                        <strong>Pass Visual? </strong> {cuChemX.visualPass}&emsp;&emsp;
+                        <strong>Comment:</strong> {cuChemX.comment}
+                    </p>
                 </div>
-            </div>
-                <hr/>
-            <p><strong>Comment:</strong> {cuChemX.comment}</p>
 
             <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
 
