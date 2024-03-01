@@ -340,8 +340,3 @@ input::placeholder {
   justify-content: space-between;
 }
 
-.deleteAlert {
-  color: #ff0000;
-  font-weight: 900;
-  font-size: x-large;
-}

@@ -94,7 +94,7 @@ const Copper01Details = ({copper01}) => {
             {/* Delete confirmation dialog */}
             {showDeleteConfirmation && (
                 <div className="delete-confirmation">
-                    <p className="deleteAlert">Are you sure you want to delete this entry?</p>
+                    <p style={{fontSize: '1.2rem', color: 'red'}}>Are you sure you want to delete this entry?</p>
                     <button onClick={handleDeleteConfirm}>Delete</button>
                     <button onClick={handleCancelDelete}>Cancel</button>
                 </div>
