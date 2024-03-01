@@ -8,6 +8,7 @@ const Copper01Details = ({copper01}) => {
     const { dispatch } = useCopper01Context()
 
     const [isModalOpen, setIsModalOpen] = useState(false) //modal code
+    const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
 
     const handleClick = async () => {
         const response = await fetch('/copper01/' + copper01._id, {
@@ -25,6 +26,20 @@ const Copper01Details = ({copper01}) => {
     }
     const closeModal = () => {
         setIsModalOpen(false)
+    }
+
+    //delete alert
+    const handleDeleteClick = () => {
+        setShowDeleteConfirmation(true);
+    }
+
+    const handleDeleteConfirm = () => {
+        handleClick(); // Call delete function
+        setShowDeleteConfirmation(false); // Close confirmation dialog after delete
+    }
+
+    const handleCancelDelete = () => {
+        setShowDeleteConfirmation(false); // Close confirmation dialog
     }
 
     return (
@@ -74,7 +89,16 @@ const Copper01Details = ({copper01}) => {
                     <strong className="ring2">4:</strong> {copper01.rng4od4} 
                     <strong className="ring2">Avg:</strong> {copper01.rng4odAverage}</p>
 
-            <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
+            <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
+
+            {/* Delete confirmation dialog */}
+            {showDeleteConfirmation && (
+                <div className="delete-confirmation">
+                    <p className="deleteAlert">Are you sure you want to delete this entry?</p>
+                    <button onClick={handleDeleteConfirm}>Delete</button>
+                    <button onClick={handleCancelDelete}>Cancel</button>
+                </div>
+            )}
 
             {/* modal code */}
             <button className="edit-button" onClick={handleEditClick}>Edit</button>

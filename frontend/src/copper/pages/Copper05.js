@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useCopper05Context } from "../hooks/useCopper05Context";
-import { Link } from "react-router-dom";
 
 import Navbar from "../../homePage/Navbar";
 import Copper05Details from '../components/Copper05Details';
@@ -27,7 +26,6 @@ const Copper05 = () => {
         <div className="copper-background-fill">
             <Navbar />
             <Copper05Form />
-            <Link to="/copper05/list" target="_blank" className="listButton">List View</Link>
             <div className="copper05s">
                 {copper05s && copper05s.map(copper05 => (
                     <Copper05Details copper05={copper05} key={copper05._id} />

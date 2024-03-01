@@ -17,7 +17,7 @@ Features still to add:
 <!-- -download the background images to reduce loadtime -->
 -Test what happens if you lose internet connection during testing
 -Shadow highlight newly added entries
--Are you sure you want to delete alert
+<!-- -Are you sure you want to delete alert -->
 -Clear fields button
 
 

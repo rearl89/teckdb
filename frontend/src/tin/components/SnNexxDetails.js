@@ -8,6 +8,7 @@ const SnNexxDetails = ({sn_nexx}) => {
     const { dispatch } = useSnNexxContext()
     
     const [isModalOpen, setIsModalOpen] = useState(false) //modal code
+    const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
 
     const handleClick = async () => {
         const response = await fetch('/sn_nexx/' + sn_nexx._id, {
@@ -27,6 +28,20 @@ const SnNexxDetails = ({sn_nexx}) => {
         setIsModalOpen(false)
     }
 
+    //delete alert
+    const handleDeleteClick = () => {
+        setShowDeleteConfirmation(true);
+    }
+
+    const handleDeleteConfirm = () => {
+        handleClick(); // Call delete function
+        setShowDeleteConfirmation(false); // Close confirmation dialog after delete
+    }
+
+    const handleCancelDelete = () => {
+        setShowDeleteConfirmation(false); // Close confirmation dialog
+    }
+
     return (
         <div className="anode-details">
             <div>
@@ -44,7 +59,16 @@ const SnNexxDetails = ({sn_nexx}) => {
                 <hr/>
             <p><strong>Comment:</strong> {sn_nexx.comment}</p>
 
-            <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
+            <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
+
+            {/* Delete confirmation dialog */}
+            {showDeleteConfirmation && (
+                <div className="delete-confirmation">
+                    <p className="deleteAlert">Are you sure you want to delete this entry?</p>
+                    <button onClick={handleDeleteConfirm}>Delete</button>
+                    <button onClick={handleCancelDelete}>Cancel</button>
+                </div>
+            )}
             
             {/* modal code */}
             <button className="edit-button" onClick={handleEditClick}>Edit</button>
