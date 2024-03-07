@@ -15,6 +15,17 @@ form button {
     background: rgb(68, 185, 138);
   }
 
+  .anode-details span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: #f1f1f1;
+    padding: 6px;
+    border-radius: 50%;
+    color: #333;
+  }
+
   .edit-button {
     background: var(--primary);
     border: 0;
@@ -346,3 +357,4 @@ form button {
   .acm:hover {
     transform: scale(1.2);
   }
+

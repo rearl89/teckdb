@@ -45,18 +45,18 @@ const CuChemXDetails = ({cuChemX}) => {
     return (
         <div className="anode-details2">
                 <div>
-                    <hr/>
                     <p>
-                        <strong>Batch ID:</strong> {cuChemX.batchID} &emsp;&emsp;
-                        <strong>Anode #:</strong> {cuChemX.anode} &emsp;&emsp;<strong>Date:</strong> {format(new Date(cuChemX.createdAt), 'MM-dd-yyyy')}&emsp;&emsp;&emsp;&emsp;
-                        <strong>Weight:</strong> {cuChemX.weight} &emsp;&emsp;&emsp;&emsp;&emsp;
-                        <strong>Thickness:</strong> {cuChemX.thickness} &emsp;&emsp;&emsp;&emsp;
-                        <strong>Pass Visual? </strong> {cuChemX.visualPass}&emsp;&emsp;
-                        <strong>Comment:</strong> {cuChemX.comment}
+                        <div>{cuChemX.batchID}</div>
+                        <div>{cuChemX.anode}</div>
+                        <div>{format(new Date(cuChemX.createdAt), 'MM-dd-yyyy')}</div>
+                        <div>{cuChemX.weight}</div>
+                        <div>{cuChemX.thickness}</div>
+                        <div>{cuChemX.visualPass}</div>
+                        <div>{cuChemX.comment}</div>
                     </p>
                 </div>
 
-            <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
+            
 
             {/* Delete confirmation dialog */}
             {showDeleteConfirmation && (
@@ -68,13 +68,14 @@ const CuChemXDetails = ({cuChemX}) => {
             )}
             
             {/* modal code */}
-            <button className="edit-button" onClick={handleEditClick}>Edit</button>
+            <span className="material-symbols-outlined" onClick={handleEditClick}>edit</span>
             {isModalOpen && (
                 <CuChemXEditModal
                     cuChemX={cuChemX}
                     closeModal={closeModal}
                 />
             )}
+            <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
             
         </div>
     )

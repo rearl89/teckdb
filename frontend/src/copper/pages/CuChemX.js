@@ -28,6 +28,15 @@ const CuChemX = () => {
             <Navbar />
             <CuChemXForm />
             {/* <Link to="/cuChemX/list" target="_blank" className="listButton">List View</Link> */}
+            <div className="cuChemXColumns">
+                <h5>Batch ID</h5>
+                <h5>Anode #</h5>
+                <h5>Date</h5>
+                <h5>Weight</h5>
+                <h5>Thickness</h5>
+                <h5>Pass Visual?</h5>
+                <h5>Comment</h5>
+            </div>
             <div className="cuChemXs">
                 {cuChemXs && cuChemXs.map(cuChemX => (
                     <CuChemXDetails cuChemX={cuChemX} key={cuChemX._id} />

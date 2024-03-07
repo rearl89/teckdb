@@ -103,7 +103,7 @@ const Copper05Details = ({copper05}) => {
             )}
 
             {/* modal code */}
-            <button className="edit-button" onClick={handleEditClick}>Edit</button>
+            <button className="material-symbols-outlined" onClick={handleEditClick}>edit</button>
             {isModalOpen && (
                 <Copper05EditModal
                     copper05={copper05}
