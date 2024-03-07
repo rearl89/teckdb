@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
+const copper200Routes = require('./copper/routes/copper200')
 const copper01Routes = require('./copper/routes/copper01')
 const copper05Routes = require('./copper/routes/copper05')
 const cuChemXRoutes = require('./copper/routes/cuChemX')
@@ -16,6 +17,7 @@ app.use((req, res, next) => {
     next()
 })
 
+app.use('/copper200', copper200Routes)
 app.use('/copper01', copper01Routes)
 app.use('/copper05', copper05Routes)
 app.use('/cuChemX', cuChemXRoutes)
