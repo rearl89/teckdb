@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useCuChemXContext } from "../hooks/useCuChemXContext"
+import DeleteConfirmationModal from "./DeleteConfirmationModal";
 import CuChemXEditModal from "./CuChemXEditModal"
 import format from 'date-fns/format'
 
@@ -43,8 +44,9 @@ const CuChemXDetails = ({cuChemX}) => {
     }
 
     return (
-        <div className="anode-details2">
-                <div>
+        <div>
+                <div className="anode-details2">
+                {/* <hr/> */}
                     <p>
                         <div>{cuChemX.batchID}</div>
                         <div>{cuChemX.anode}</div>
@@ -54,28 +56,30 @@ const CuChemXDetails = ({cuChemX}) => {
                         <div>{cuChemX.visualPass}</div>
                         <div>{cuChemX.comment}</div>
                     </p>
+                    <span className="material-symbols-outlined" onClick={handleEditClick}>edit</span>
+                    <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
                 </div>
 
             
 
             {/* Delete confirmation dialog */}
             {showDeleteConfirmation && (
-                <div className="delete-confirmation">
-                    <p style={{fontSize: '1.2rem', color: 'red'}}>Are you sure you want to delete this entry?</p>
-                    <button onClick={handleDeleteConfirm}>Delete</button>
-                    <button onClick={handleCancelDelete}>Cancel</button>
-                </div>
+                <DeleteConfirmationModal
+                    batchID={cuChemX.batchID}
+                    handleDeleteConfirm={handleDeleteConfirm}
+                    handleCancelDelete={handleCancelDelete}
+                />
             )}
             
             {/* modal code */}
-            <span className="material-symbols-outlined" onClick={handleEditClick}>edit</span>
+            
             {isModalOpen && (
                 <CuChemXEditModal
                     cuChemX={cuChemX}
                     closeModal={closeModal}
                 />
             )}
-            <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
+            
             
         </div>
     )

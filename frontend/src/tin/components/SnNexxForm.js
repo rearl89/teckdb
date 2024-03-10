@@ -67,7 +67,7 @@ const SnNexxForm = () => {
   };
 
   const inputRows = inputData.map((input, index) => (
-    <div className="snFormGrid" key={index}>
+    <div className="chemXFormGrid" key={index}>
       <input
         type="number"
         onChange={(e) => handleInputChange(e, index, 'batchID')}

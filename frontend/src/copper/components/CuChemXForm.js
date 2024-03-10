@@ -67,7 +67,7 @@ const CuChemXForm = () => {
   };
 
   const inputRows = inputData.map((input, index) => (
-    <div className="snFormGrid" key={index}>
+    <div className="chemXFormGrid" key={index}>
       <input
         type="text"
         onChange={(e) => handleInputChange(e, index, 'batchID')}
