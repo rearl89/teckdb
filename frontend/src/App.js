@@ -9,7 +9,6 @@ import Copper05 from './copper/pages/Copper05'
 import CuChemX from './copper/pages/CuChemX';
 import SN_NEXX from './tin/pages/SN_NEXX';
 import ListCopper01 from './copper/pages/ListCopper01';
-import ListSnNexx from './tin/pages/ListSN_NEXX';
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
               <Route path="/cuChemX" element={<CuChemX />} />
               <Route path="/sn_nexx" element={<SN_NEXX />} />
               <Route path="/copper01/list" element={<ListCopper01 />} />
-              <Route path="/sn_nexx/list" element={<ListSnNexx />} />
             </Routes>
           </div>
       </BrowserRouter>
