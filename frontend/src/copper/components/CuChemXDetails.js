@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useCuChemXContext } from "../hooks/useCuChemXContext"
-import DeleteConfirmationModal from "./DeleteConfirmationModal";
+import DeleteConfirmationModal from "../../sharedComponents/DeleteConfirmationModal";
 import CuChemXEditModal from "./CuChemXEditModal"
 import format from 'date-fns/format'
 

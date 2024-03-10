@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import { useSnNexxContext } from "../hooks/useSnNexxContext"
-import { Link } from "react-router-dom"
 
 import Navbar from "../../homePage/Navbar"
 import SnNexxDetails from "../components/SnNexxDetails"
@@ -25,8 +24,16 @@ const SN_NEXX = () => {
         <div className="tin-background-fill">
             <Navbar />
             <SnNexxForm />
-            <Link to="/sn_nexx/list" target="_blank" className="listButton">List View</Link>
-            <div>
+            <div className="cuChemXColumns">
+                <h5>Batch ID</h5>
+                <h5>Anode #</h5>
+                <h5>Date</h5>
+                <h5>Weight</h5>
+                <h5>Thickness</h5>
+                <h5>Pass Visual?</h5>
+                <h5>Comment</h5>
+            </div>
+            <div className="cuChemXs">
                 {sn_nexxs && sn_nexxs.map(sn_nexx => (
                         <SnNexxDetails sn_nexx={sn_nexx} key={sn_nexx._id} />
                     ))}

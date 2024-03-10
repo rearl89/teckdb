@@ -27,7 +27,6 @@ const CuChemX = () => {
         <div className="copper-background-fill">
             <Navbar />
             <CuChemXForm />
-            {/* <Link to="/cuChemX/list" target="_blank" className="listButton">List View</Link> */}
             <div className="cuChemXColumns">
                 <h5>Batch ID</h5>
                 <h5>Anode #</h5>

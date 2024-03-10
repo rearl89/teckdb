@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useSnNexxContext } from "../hooks/useSnNexxContext"
+import DeleteConfirmationModal from "../../sharedComponents/DeleteConfirmationModal";
 import SnNexxEditModal from "./SnNexxEditModal"
 import format from 'date-fns/format'
 
@@ -43,41 +44,42 @@ const SnNexxDetails = ({sn_nexx}) => {
     }
 
     return (
-        <div className="anode-details">
-            <div>
-                <h4>
-                    <strong>Batch ID:</strong> {sn_nexx.batchID} &emsp;&emsp;
-                    <strong>Anode #:</strong> {sn_nexx.anode} &emsp;&emsp;
-                    <strong>Date:</strong> {format(new Date(sn_nexx.createdAt), 'MM-dd-yyyy')}
-                </h4>
-                <div>
-                    <p><strong>Weight:</strong> {sn_nexx.weight} &emsp;&emsp;&emsp;&emsp;&emsp;
-                    <strong>Thickness:</strong> {sn_nexx.thickness} &emsp;&emsp;&emsp;&emsp;
-                    <strong>Pass Visual? </strong> {sn_nexx.visualPass}</p>
+        <div>
+                <div className="anode-details2">
+                {/* <hr/> */}
+                    <p>
+                        <div>{sn_nexx.batchID}</div>
+                        <div>{sn_nexx.anode}</div>
+                        <div>{format(new Date(sn_nexx.createdAt), 'MM-dd-yyyy')}</div>
+                        <div>{sn_nexx.weight}</div>
+                        <div>{sn_nexx.thickness}</div>
+                        <div>{sn_nexx.visualPass}</div>
+                        <div>{sn_nexx.comment}</div>
+                    </p>
+                    <span className="material-symbols-outlined" onClick={handleEditClick}>edit</span>
+                    <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
                 </div>
-            </div>
-                <hr/>
-            <p><strong>Comment:</strong> {sn_nexx.comment}</p>
 
-            <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
+            
 
             {/* Delete confirmation dialog */}
             {showDeleteConfirmation && (
-                <div className="delete-confirmation">
-                    <p style={{fontSize: '1.2rem', color: 'red'}}>Are you sure you want to delete this entry?</p>
-                    <button onClick={handleDeleteConfirm}>Delete</button>
-                    <button onClick={handleCancelDelete}>Cancel</button>
-                </div>
+                <DeleteConfirmationModal
+                    batchID={sn_nexx.batchID}
+                    handleDeleteConfirm={handleDeleteConfirm}
+                    handleCancelDelete={handleCancelDelete}
+                />
             )}
             
             {/* modal code */}
-            <button className="edit-button" onClick={handleEditClick}>Edit</button>
+            
             {isModalOpen && (
                 <SnNexxEditModal
                     sn_nexx={sn_nexx}
                     closeModal={closeModal}
                 />
             )}
+            
             
         </div>
     )

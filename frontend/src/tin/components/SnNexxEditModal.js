@@ -113,8 +113,8 @@ const SnNexxEditModal = ({ sn_nexx, closeModal }) => {
           </label>
           <br/>
           <div>
-            <button onClick={handleSave}>Save</button>
-            <button onClick={handleCancel}>Cancel</button>
+          <button className="material-symbols-outlined" onClick={handleSave}>check</button>
+            <button className="material-symbols-outlined" onClick={handleCancel}>close</button>
           </div>
         </div>
       </div>
