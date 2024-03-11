@@ -1,3 +1,4 @@
+/* Form submission button */
 form button {
     background: var(--primary);
     width: 75px;
@@ -15,6 +16,7 @@ form button {
     background: rgb(68, 185, 138);
   }
 
+  /* Edit and Delete buttons */
   .anode-details span {
     position: absolute;
     top: 20px;
@@ -24,6 +26,17 @@ form button {
     padding: 6px;
     border-radius: 50%;
     color: #333;
+  }
+
+  .delete-confirmation-modal button {
+    padding: 10px 20px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
   }
 
   .edit-button {
@@ -41,6 +54,7 @@ form button {
     background: rgb(68, 185, 138);
   }  
 
+  /* List details of Cu 01s only for now, probably delete later */
   .listButton {
     background: var(--primary);
     border: 0;
@@ -71,11 +85,13 @@ form button {
     background: rgb(68, 185, 138);
   }
 
+/* Cu 01 and 05 submit button because it was too close to the bottom scroller */
 .cuSubmit {
     margin-top: 10px;
 }
 
-.homeButtons { /* ****************************buttons**************************** */
+/* Details on buttons on the home page */
+.homeButtons {
     width: 350px;
     margin: 0 auto;
     display: grid;
@@ -213,6 +229,7 @@ form button {
   .PbButton:hover {
     transform: scale(1.2);
   }
+
   /* Copper page buttons */
   .CuP01 {
     background-color: orange;
@@ -321,6 +338,7 @@ form button {
   .qorvo:hover {
     transform: scale(1.2);
   }
+
   /* Tin page buttons */
   .SnNexx {
     background-color: #0056b3;
@@ -356,15 +374,4 @@ form button {
   
   .acm:hover {
     transform: scale(1.2);
-  }
-
-  .delete-confirmation-modal button {
-    padding: 10px 20px;
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
-    margin-top: 20px;
   }
