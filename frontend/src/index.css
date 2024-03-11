@@ -343,7 +343,6 @@ input::placeholder {
 
 /* Anode details for Cu and Sn ChemX only */
 .anode-details2 {
-  background: #fff;
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
@@ -351,8 +350,8 @@ input::placeholder {
   position: relative;
   box-sizing: border-box;
   background: rgba(202, 202, 202, 0.66);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   border: 1px solid rgba(202, 202, 202, 1);
 }
 
@@ -404,4 +403,48 @@ input::placeholder {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(202, 202, 202, 1);
   padding: 20px;
+}
+
+.cu01Columns {
+  display: grid;
+  grid-template-columns: repeat(45, 50px); /* Adjust the number of columns as per your requirement */
+  grid-gap: 1rem;
+  padding-left: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 101; /* Increase the z-index value */
+  background: rgba(202, 202, 202, 0.66);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: fit-content;
+  padding-right: 22px
+}
+
+.cu01AnodeDetails {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: fit-content;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  background: rgba(202, 202, 202, 0.66);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(202, 202, 202, 1);
+}
+
+.cu01AnodeDetails p {
+  display: grid;
+  grid-template-columns: repeat(45, 50px);
+  grid-gap: 1rem;
+  margin: 0;
+  font-size: 1vw;
+  color: #000000;
+  padding-top: 10px;
+  padding-bottom: 5px; 
+}
+
+.cu01C-Ds {
+  overflow-x: auto;
 }

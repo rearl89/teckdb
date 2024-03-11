@@ -46,7 +46,6 @@ const SnNexxDetails = ({sn_nexx}) => {
     return (
         <div>
                 <div className="anode-details2">
-                {/* <hr/> */}
                     <p>
                         <div>{sn_nexx.batchID}</div>
                         <div>{sn_nexx.anode}</div>
