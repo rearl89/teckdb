@@ -51,41 +51,41 @@ const Copper01Details = ({copper01}) => {
                     <div>{format(new Date(copper01.createdAt), 'MM-dd-yyyy')}</div>
                     <div>{copper01.postPass}</div>
                     <div>{copper01.spongePass}</div>
-                    <div></div>
+                    <div><strong>Ring 1</strong></div>
                     <div>{copper01.rng1b}</div>
                     <div>{copper01.rng1m}</div>
                     <div>{copper01.rng1t}</div>
                     <div>{copper01.rng1Average}</div>
-                    <div></div>
+                    <div><strong>Ring 2</strong></div>
                     <div>{copper01.rng2b} </div>
                     <div>{copper01.rng2m}</div> 
                     <div>{copper01.rng2t} </div>
                     <div>{copper01.rng2Average}</div>
-                    <div></div>
+                    <div><strong>Ring 3</strong></div>
                     <div>{copper01.rng3b}</div> 
                     <div>{copper01.rng3m} </div>
                     <div>{copper01.rng3t} </div>
                     <div>{copper01.rng3Average}</div>
-                    <div></div>
+                    <div><strong>Ring 4</strong></div>
                     <div>{copper01.rng4b}</div> 
                     <div>{copper01.rng4m}</div> 
                     <div>{copper01.rng4t} </div>
                     <div>{copper01.rng4Average}</div>
-                    <div></div>
+                    <div><strong>Ring 1</strong></div>
                     <div>{copper01.rng1od1} </div>
                     <div>{copper01.rng1od2} </div>
                     <div>{copper01.rng1odAverage}</div>
-                    <div></div>
+                    <div><strong>Ring 2</strong></div>
                     <div>{copper01.rng2od1} </div>
                     <div>{copper01.rng2od2} </div>
                     <div>{copper01.rng2odAverage}</div>
-                    <div></div>
+                    <div><strong>Ring 3</strong></div>
                     <div>{copper01.rng3od1} </div>
                     <div>{copper01.rng3od2} </div>
                     <div>{copper01.rng3od3} </div>
                     <div>{copper01.rng3od4} </div>
                     <div>{copper01.rng3odAverage}</div>
-                    <div></div>
+                    <div><strong>Ring 4</strong></div>
                     <div>{copper01.rng4od1} </div>
                     <div>{copper01.rng4od2}</div>
                     <div>{copper01.rng4od3}</div>

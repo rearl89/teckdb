@@ -5,6 +5,7 @@ import { useCopper01Context } from "../hooks/useCopper01Context";
 import Navbar from "../../homePage/Navbar";
 import Copper01Details from '../components/Copper01Details';
 import Copper01Form from "../components/Copper01Form";
+import Copper01TestHeadings from "../components/Copper01TestHeadings";
 
 
 const Copper01 = () => {
@@ -29,53 +30,7 @@ const Copper01 = () => {
             <Copper01Form />
             {/* <Link to="/copper01/list" target="_blank" className="listButton">List View</Link> */}
             <form className="cu01C-Ds">
-                <div className="cu01Columns">
-                    <h6>Batch ID</h6>
-                    <h6>Set #</h6>
-                    <h6>Date</h6>
-                    <h6>Pass Post?</h6>
-                    <h6>Pass Sponge?</h6>
-                    <h6>Ring 1</h6>
-                    <h6>Bottom</h6>
-                    <h6>Middle</h6>
-                    <h6>Top</h6>
-                    <h6>Average</h6>
-                    <h6>Ring 2</h6>
-                    <h6>Bottom</h6>
-                    <h6>Middle</h6>
-                    <h6>Top</h6>
-                    <h6>Average</h6>
-                    <h6>Ring 3</h6>
-                    <h6>Bottom</h6>
-                    <h6>Middle</h6>
-                    <h6>Top</h6>
-                    <h6>Average</h6>
-                    <h6>Ring 4</h6>
-                    <h6>Bottom</h6>
-                    <h6>Middle</h6>
-                    <h6>Top</h6>
-                    <h6>Average</h6>
-                    <h6>Ring 1</h6>
-                    <h6>OD1</h6>
-                    <h6>OD2</h6>
-                    <h6>Average</h6>
-                    <h6>Ring 2</h6>
-                    <h6>OD1</h6>
-                    <h6>OD2</h6>
-                    <h6>Average</h6>
-                    <h6>Ring 3</h6>
-                    <h6>OD1</h6>
-                    <h6>OD2</h6>
-                    <h6>OD3</h6>
-                    <h6>OD4</h6>
-                    <h6>Average</h6>
-                    <h6>Ring 4</h6>
-                    <h6>OD1</h6>
-                    <h6>OD2</h6>
-                    <h6>OD3</h6>
-                    <h6>OD4</h6>
-                    <h6>Average</h6>
-                </div>
+                <Copper01TestHeadings/>
                 <div className="copper01s">
                     {copper01s && copper01s.map(copper01 => (
                         <Copper01Details copper01={copper01} key={copper01._id} />

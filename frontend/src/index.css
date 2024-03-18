@@ -357,7 +357,7 @@ input::placeholder {
 
 .anode-details2 p {
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: repeat(7, 100px);
   grid-gap: 1rem;
   margin: 0;
   font-size: 1vw;
@@ -376,7 +376,7 @@ input::placeholder {
 
 .cuChemXColumns {
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: repeat(7, 100px);
   grid-gap: 1rem;
   padding-left: 20px;
   position: -webkit-sticky;
@@ -410,15 +410,18 @@ input::placeholder {
   grid-template-columns: repeat(45, 50px); /* Adjust the number of columns as per your requirement */
   grid-gap: 1rem;
   padding-left: 20px;
+ 
+}
+.cu01Columns.sticky {
   position: sticky;
   top: 0;
-  z-index: 101; /* Increase the z-index value */
+  z-index: 1000; /* Adjust the z-index value as needed */
   background: rgba(202, 202, 202, 0.66);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: fit-content;
-  padding-right: 22px
+  padding-right: 22px;
 }
 
 .cu01AnodeDetails {
