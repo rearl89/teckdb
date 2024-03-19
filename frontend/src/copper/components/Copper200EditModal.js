@@ -89,7 +89,7 @@ const Copper200EditModal = ({ copper200, closeModal }) => {
     <div className="modal">
       <div className="modal-content">
         <div className="modal-scrollable">
-          <h2>Edit Copper 200</h2>
+          <h2>Edit Copper 200-3</h2>
           <label>
             <strong>Batch ID: {copper200.batchID} &emsp;&emsp;&emsp;&emsp; Set #: {copper200.set}</strong>
           </label>
@@ -248,9 +248,9 @@ const Copper200EditModal = ({ copper200, closeModal }) => {
             Average: {Math.round((editedData.rng4b + editedData.rng4m + editedData.rng4t) / 3)}
           </label>
           <br/>
-          <div className="modal-footer">
-            <button className="modal-button" onClick={handleSave}>Save</button>
-            <button className="modal-button" onClick={handleCancel}>Cancel</button>
+          <div>
+            <button className="material-symbols-outlined" onClick={handleSave}>check</button>
+            <button className="material-symbols-outlined" onClick={handleCancel}>close</button>
           </div>
         </div>
       </div>

@@ -197,9 +197,25 @@ input {
   width: 75%;
   padding-bottom: 60px;
 }
-.cuFormGrid {
+.cu01FormGrid {
   display: grid;
   grid-template-columns: 8% repeat(2, 5%) repeat(24, 8%);
+  margin-bottom: -30px;
+}
+
+.cu200Form {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  width: 75%;
+  padding-bottom: 60px;
+}
+.cu200FormGrid {
+  display: grid;
+  grid-template-columns: 8% repeat(2, 5%) repeat(12, 8%);
   margin-bottom: -30px;
 }
 
@@ -450,5 +466,53 @@ input::placeholder {
 }
 
 .cu01C-Ds {
+  overflow-x: auto;
+}
+
+.cu200Columns {
+  display: grid;
+  grid-template-columns: repeat(25, 50px); /* Adjust the number of columns as per your requirement */
+  grid-gap: 1rem;
+  padding-left: 20px;
+ 
+}
+.cu200Columns.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Adjust the z-index value as needed */
+  background: rgba(202, 202, 202, 0.66);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: fit-content;
+  padding-right: 22px;
+}
+
+.cu200AnodeDetails {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: fit-content;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  background: rgba(202, 202, 202, 0.66);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(202, 202, 202, 1);
+}
+
+.cu200AnodeDetails p {
+  display: grid;
+  grid-template-columns: repeat(25, 50px);
+  grid-gap: 1rem;
+  margin: 0;
+  font-size: 1vw;
+  color: #000000;
+  padding-top: 10px;
+  padding-bottom: 5px; 
+}
+
+.cu200C-Ds {
   overflow-x: auto;
 }

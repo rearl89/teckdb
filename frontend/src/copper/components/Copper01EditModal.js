@@ -409,9 +409,9 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
             Average: {Math.round((editedData.rng4od1 + editedData.rng4od2 + editedData.rng4od3 + editedData.rng4od4) / 4)}
           </label>
           <br/>
-          <div className="modal-footer">
-            <button className="modal-button" onClick={handleSave}>Save</button>
-            <button className="modal-button" onClick={handleCancel}>Cancel</button>
+          <div>
+            <button className="material-symbols-outlined" onClick={handleSave}>check</button>
+            <button className="material-symbols-outlined" onClick={handleCancel}>close</button>
           </div>
         </div>
       </div>

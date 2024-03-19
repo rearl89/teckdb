@@ -1,6 +1,6 @@
 const Copper01TestHeadings = () => {
     return (
-        <div className="cu01Columns sticky">
+        <div className="cu200Columns sticky">
                     <h6>Batch ID</h6>
                     <h6>Set #</h6>
                     <h6>Date</h6>

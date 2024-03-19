@@ -78,7 +78,7 @@ const Copper200Form = () => {
   };
 
   const inputRows = inputData.map((input, index) => (
-    <div className="cuFormGrid" key={index}>
+    <div className="cu200FormGrid" key={index}>
       <input
         type="text"
         onChange={(e) => handleInputChange(e, index, "batchID")}
@@ -190,7 +190,7 @@ const Copper200Form = () => {
   return (
     <form className="cu200Form" onSubmit={handleSubmit}>
       <div className="formHeader">
-        <h2>3-200 CuP (200)</h2>
+        <h2>3-200 CuP</h2>
       </div>
       <div>
         <label>How many anodes are being tested?</label>
