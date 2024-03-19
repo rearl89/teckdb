@@ -10,62 +10,62 @@ const Home = () => {
                 <h2>Which product element?</h2>
                     <div className="homeButtons">
                         <Link to="/copper" className="CuButton">
-                            <div class="element">
-                                <div class="square">
-                                    <div class="atomic-number">29</div>
-                                    <div class="label">
-                                        <div class="symbol">Cu</div>
-                                        <div class="name">Copper</div>
+                            <div className="element">
+                                <div className="square">
+                                    <div className="atomic-number">29</div>
+                                    <div className="label">
+                                        <div className="symbol">Cu</div>
+                                        <div className="name">Copper</div>
                                     </div>
-                                    <div class="atomic-mass">63.546</div>
+                                    <div className="atomic-mass">63.546</div>
                                 </div>
                             </div>
                         </Link>
                         <Link to="/tin" className="SnButton">
-                            <div class="element">
-                                <div class="square">
-                                    <div class="atomic-number">50</div>
-                                    <div class="label">
-                                        <div class="symbol">Sn</div>
-                                        <div class="name">Tin</div>
+                            <div className="element">
+                                <div className="square">
+                                    <div className="atomic-number">50</div>
+                                    <div className="label">
+                                        <div className="symbol">Sn</div>
+                                        <div className="name">Tin</div>
                                     </div>
-                                    <div class="atomic-mass">204.38</div>
+                                    <div className="atomic-mass">204.38</div>
                                 </div>
                             </div>
                         </Link>
                         <Link to="/nickel" className="NiButton">
-                        <div class="element">
-                                <div class="square">
-                                    <div class="atomic-number">28</div>
-                                    <div class="label">
-                                        <div class="symbol">Ni</div>
-                                        <div class="name">Nickel</div>
+                        <div className="element">
+                                <div className="square">
+                                    <div className="atomic-number">28</div>
+                                    <div className="label">
+                                        <div className="symbol">Ni</div>
+                                        <div className="name">Nickel</div>
                                     </div>
-                                    <div class="atomic-mass">58.693</div>
+                                    <div className="atomic-mass">58.693</div>
                                 </div>
                             </div>
                         </Link>
                         <Link to="/indium" className="InButton">
-                            <div class="element">
-                                <div class="square">
-                                    <div class="atomic-number">49</div>
-                                    <div class="label">
-                                        <div class="symbol">In</div>
-                                        <div class="name">Indium</div>
+                            <div className="element">
+                                <div className="square">
+                                    <div className="atomic-number">49</div>
+                                    <div className="label">
+                                        <div className="symbol">In</div>
+                                        <div className="name">Indium</div>
                                     </div>
-                                    <div class="atomic-mass">114.82</div>
+                                    <div className="atomic-mass">114.82</div>
                                 </div>
                             </div>
                         </Link>
                         <Link to="/lead" className="PbButton">
-                            <div class="element">
-                                <div class="square">
-                                    <div class="atomic-number">82</div>
-                                    <div class="label">
-                                        <div class="symbol">Pb</div>
-                                        <div class="name">Lead</div>
+                            <div className="element">
+                                <div className="square">
+                                    <div className="atomic-number">82</div>
+                                    <div className="label">
+                                        <div className="symbol">Pb</div>
+                                        <div className="name">Lead</div>
                                     </div>
-                                    <div class="atomic-mass">207.2</div>
+                                    <div className="atomic-mass">207.2</div>
                                 </div>
                             </div>
                         </Link>
