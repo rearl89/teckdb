@@ -82,7 +82,7 @@ const Copper05Form = () => {
   };
 
   const inputRows = inputData.map((input, index) => (
-    <div className="cuFormGrid" key={index}>
+    <div className="cu05FormGrid" key={index}>
       <input
         type="text"
         onChange={(e) => handleInputChange(e, index, "batchID")}

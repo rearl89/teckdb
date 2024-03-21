@@ -42,7 +42,14 @@ const Copper05EditModal = ({ copper05, closeModal }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const updatedData = { ...editedData, [name]: parseFloat(value) };
+    let updatedValue = value;
+
+    // Check if the input represents a numeric value
+    if (!isNaN(value)) {
+      updatedValue = parseFloat(value); // Parse the numeric value
+    }
+
+    const updatedData = { ...editedData, [name]: updatedValue };
     
     // Calculate and update the "Ring 1 Average" when "Bottom," "Middle," or "Top" changes
     if (name === "rng1b" || name === "rng1m" || name === "rng1t") {
@@ -305,9 +312,10 @@ const Copper05EditModal = ({ copper05, closeModal }) => {
               />
           </label>
           <br/>
+          <br/>
           <div className="modal-footer">
-            <button className="modal-button" onClick={handleSave}>check</button>
-            <button className="modal-button" onClick={handleCancel}>close</button>
+            <button className="modal-button" onClick={handleSave}>Save</button>
+            <button className="modal-button" onClick={handleCancel}>Close</button>
           </div>
         </div>
       </div>

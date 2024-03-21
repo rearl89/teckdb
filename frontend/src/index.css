@@ -199,7 +199,13 @@ input {
 }
 .cu01FormGrid {
   display: grid;
-  grid-template-columns: 8% repeat(2, 5%) repeat(24, 8%);
+  grid-template-columns: repeat(27, 8%);
+  margin-bottom: -30px;
+}
+
+.cu05FormGrid {
+  display: grid;
+  grid-template-columns: repeat(20, 8%);
   margin-bottom: -30px;
 }
 
@@ -215,7 +221,7 @@ input {
 }
 .cu200FormGrid {
   display: grid;
-  grid-template-columns: 8% repeat(2, 5%) repeat(12, 8%);
+  grid-template-columns: repeat(15, 8%);
   margin-bottom: -30px;
 }
 
@@ -352,6 +358,19 @@ input::placeholder {
   right: 0;
   background: #fff; /* Background for the footer */
   padding: 10px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-footer2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff; /* Background for the footer */
+  padding: 10px;
+  padding-bottom: 10%;
   border-top: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
