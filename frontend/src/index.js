@@ -4,6 +4,7 @@ import './index.css';
 import './buttons.css';
 import App from './App';
 import { Copper200ContextProvider } from './copper/context/Copper200Context';
+import { Cu200PureContextProvider } from './copper/context/Cu200PureContext';
 import { Copper01ContextProvider } from './copper/context/Copper01Context';
 import { Copper05ContextProvider } from './copper/context/Copper05Context';
 import { CuChemXContextProvider } from './copper/context/CuChemXContext';
@@ -14,6 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // Define an array of context providers
 const contextProviders = [
   Copper200ContextProvider,
+  Cu200PureContextProvider,
   Copper01ContextProvider,
   Copper05ContextProvider,
   CuChemXContextProvider,

@@ -9,6 +9,7 @@ import Copper05 from './copper/pages/Copper05'
 import CuChemX from './copper/pages/CuChemX';
 import SN_NEXX from './tin/pages/SN_NEXX';
 import Copper200 from './copper/pages/Copper200';
+import Cu200Pure from './copper/pages/Cu200Pure';
 // import ListCopper01 from './copper/pages/ListCopper01';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Route path="/copper" element={<Copper />} />
               <Route path="/tin" element={<Tin />} />
               <Route path="/cup200-3" element={<Copper200 />} />
+              <Route path="/cup200-3Pure" element={<Cu200Pure />} />
               <Route path="/copper01" element={<Copper01 />} />
               <Route path="/copper05" element={<Copper05 />} />
               <Route path="/cuChemX" element={<CuChemX />} />
