@@ -442,7 +442,7 @@ input::placeholder {
 
 .cu01Columns {
   display: grid;
-  grid-template-columns: repeat(45, 50px); /* Adjust the number of columns as per your requirement */
+  grid-template-columns: repeat(2, 50px) 60px repeat(42, 50px); /* Adjust the number of columns as per your requirement */
   grid-gap: 1rem;
   padding-left: 20px;
  
@@ -475,7 +475,7 @@ input::placeholder {
 
 .cu01AnodeDetails p {
   display: grid;
-  grid-template-columns: repeat(45, 50px);
+  grid-template-columns: repeat(2, 50px) 60px repeat(42, 50px);
   grid-gap: 1rem;
   margin: 0;
   font-size: 1vw;
@@ -490,7 +490,7 @@ input::placeholder {
 
 .cu200Columns {
   display: grid;
-  grid-template-columns: repeat(25, 50px); /* Adjust the number of columns as per your requirement */
+  grid-template-columns: repeat(2, 50px) 60px repeat(22, 50px); /* Adjust the number of columns as per your requirement */
   grid-gap: 1rem;
   padding-left: 20px;
  
@@ -523,7 +523,7 @@ input::placeholder {
 
 .cu200AnodeDetails p {
   display: grid;
-  grid-template-columns: repeat(25, 50px);
+  grid-template-columns: repeat(2, 50px) 60px repeat(22, 50px);
   grid-gap: 1rem;
   margin: 0;
   font-size: 1vw;

@@ -4,8 +4,8 @@ const Copper01TestHeadings = () => {
                     <h6>Batch ID</h6>
                     <h6>Set #</h6>
                     <h6>Date</h6>
-                    <h6>Pass Post?</h6>
-                    <h6>Pass Sponge?</h6>
+                    <h6>Post?</h6>
+                    <h6>Sponge?</h6>
                     <div></div>
                     <h6>Bottom</h6>
                     <h6>Middle</h6>
