@@ -27,8 +27,8 @@ const Copper200 = () => {
         <div className="copper-background-fill">
             <Navbar />
             <Copper200Form />
-            <form className="cu200C-Ds">
-                <Copper200TestHeadings/>
+            <form className="overflow">
+                <Copper200TestHeadings />
                 <div className="copper200s">
                     {copper200s && copper200s.map(copper200 => (
                         <Copper200Details copper200={copper200} key={copper200._id} />

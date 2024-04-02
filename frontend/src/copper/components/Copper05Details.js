@@ -43,56 +43,49 @@ const Copper05Details = ({copper05}) => {
     }
 
     return (
-        <div className="anode-details">
-            <h4>Batch ID: {copper05.batchID} &emsp;&emsp; Set #: {copper05.set} &emsp;&emsp; Date: {format(new Date(copper05.createdAt), 'MM-dd-yyyy')}</h4>
-                    
-            <p><strong>Pass Post:</strong> {copper05.postPass} &emsp;&emsp;&emsp;
-            <strong className="ring2">Sponge Pass:</strong> {copper05.spongePass}</p>
-            <hr/>
+        <div className="cu05AnodeDetails">
             <p>
-                <strong>Ring 1 &emsp;&emsp;&emsp; b:</strong> {copper05.rng1b}
-                <strong className="ring2">m:</strong> {copper05.rng1m}
-                <strong className="ring2">t:</strong> {copper05.rng1t}
-                <strong className="ring2">Avg:</strong> {copper05.rng1Average}
+                <div>{copper05.batchID}</div>
+                <div>{copper05.set}</div>
+                <div>{format(new Date(copper05.createdAt), 'MM-dd-yyyy')}</div>
+                <div>{copper05.postPass}</div>
+                <div>{copper05.spongePass}</div>
+                <div>Ring 1</div>
+                <div>{copper05.rng1b}</div>
+                <div>{copper05.rng1m}</div>
+                <div>{copper05.rng1t}</div>
+                <div>{copper05.rng1Average}</div>
+                <div>Ring 2</div>
+                <div>{copper05.rng2b}</div>
+                <div>{copper05.rng2t}</div>
+                <div>{copper05.rng2m}</div>
+                <div>{copper05.rng2Average}</div>
+                <div>Ring 3</div>
+                <div>{copper05.rng3b}</div>
+                <div>{copper05.rng3m}</div>
+                <div>{copper05.rng3t}</div>
+                <div>{copper05.rng3Average}</div>
+                <div>Ring 4</div>
+                <div>{copper05.rng4b}</div>
+                <div>{copper05.rng4m}</div>
+                <div>{copper05.rng4t}</div>
+                <div>{copper05.rng4Average}</div>
+                <div>{copper05.rng1coat}</div>
+                <div>{copper05.rng2coat}</div>
+                <div>{copper05.rng3coat}</div>
+                <div>{copper05.rng4coat}</div>
             </p>
-            <hr/>
-            <p>
-                <strong>Ring 2 &emsp;&emsp;&emsp; b:</strong> {copper05.rng2b} 
-                <strong className="ring2">t:</strong> {copper05.rng2t} 
-                <strong className="ring2">m:</strong>  {copper05.rng2m} 
-                <strong className="ring2">Avg:</strong> {copper05.rng2Average}
-            </p>
-            <hr/>
-            <p>
-                <strong>Ring 3  &emsp;&emsp;&emsp; b:</strong> {copper05.rng3b} 
-                <strong className="ring2"g>m:</strong> {copper05.rng3m} 
-                <strong className="ring2">t:</strong> {copper05.rng3t} 
-                <strong className="ring2">Avg:</strong> {copper05.rng3Average}
-            </p>
-            <hr/>
-            <p>
-                <strong>Ring 4  &emsp;&emsp;&emsp; b:</strong> {copper05.rng4b} 
-                <strong className="ring2">m:</strong> {copper05.rng4m} 
-                <strong className="ring2">t:</strong> {copper05.rng4t} 
-                <strong className="ring2">Avg:</strong> {copper05.rng4Average}</p>
-            <hr/>
-            <p>
-                <strong>Ring 1 Coating:</strong> {copper05.rng1coat}
-            </p>
-            <hr/>
-            <p>
-                <strong>Ring 2 Coating:</strong> {copper05.rng2coat}
-            </p>
-            <hr/>
-            <p>
-                <strong>Ring 3 Coating:</strong> {copper05.rng3coat}
-            </p>
-            <hr/>
-            <p>
-                <strong>Ring 4 Coating:</strong> {copper05.rng4coat}
-            </p>
-            <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
+            
+            {/* modal code */}
+            <span className="material-symbols-outlined" onClick={handleEditClick}>edit</span>
+            {isModalOpen && (
+                <Copper05EditModal
+                    copper05={copper05}
+                    closeModal={closeModal}
+                />
+            )}
 
+            <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
             {/* Delete confirmation dialog */}
             {showDeleteConfirmation && (
                 <div className="delete-confirmation">
@@ -102,14 +95,7 @@ const Copper05Details = ({copper05}) => {
                 </div>
             )}
 
-            {/* modal code */}
-            <button className="material-symbols-outlined" onClick={handleEditClick}>edit</button>
-            {isModalOpen && (
-                <Copper05EditModal
-                    copper05={copper05}
-                    closeModal={closeModal}
-                />
-            )}
+            
         </div>
     )
 }

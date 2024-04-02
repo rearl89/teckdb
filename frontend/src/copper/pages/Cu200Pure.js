@@ -4,7 +4,7 @@ import { useCu200PureContext } from "../hooks/useCu200PureContext";
 import Navbar from "../../homePage/Navbar";
 import Cu200PureDetails from '../components/Cu200PureDetails';
 import Cu200PureForm from "../components/Cu200PureForm";
-// import Cu200PureTestHeadings from "../components/Cu200PureTestHeadings";
+import Copper200TestHeadings from "../components/Copper200TestHeadings";
 
 
 const Cu200Pure = () => {
@@ -27,8 +27,8 @@ const Cu200Pure = () => {
         <div className="copper-background-fill">
             <Navbar />
             <Cu200PureForm />
-            <form className="cu200C-Ds">
-                {/* <Cu200PureTestHeadings/> */}
+            <form className="overflow">
+                <Copper200TestHeadings/>
                 <div className="copper200s">
                     {cu200Pures && cu200Pures.map(cu200Pure => (
                         <Cu200PureDetails cu200Pure={cu200Pure} key={cu200Pure._id} />

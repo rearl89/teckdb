@@ -29,14 +29,16 @@ const Copper01 = () => {
             <Navbar />
             <Copper01Form />
             {/* <Link to="/copper01/list" target="_blank" className="listButton">List View</Link> */}
-            <form className="cu01C-Ds">
-                <Copper01TestHeadings/>
-                <div className="copper01s">
-                    {copper01s && copper01s.map(copper01 => (
-                        <Copper01Details copper01={copper01} key={copper01._id} />
-                    ))}
-                </div> 
-            </form>
+            <div className="overflow">
+                <form>
+                    <Copper01TestHeadings/>
+                    <div className="copper01s">
+                        {copper01s && copper01s.map(copper01 => (
+                            <Copper01Details copper01={copper01} key={copper01._id} />
+                        ))}
+                    </div> 
+                </form>
+            </div>
         </div>
     )
 }

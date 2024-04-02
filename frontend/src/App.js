@@ -4,12 +4,13 @@ import Home from './homePage/Home';
 
 import Copper from './copper/pages/Copper';
 import Tin from './tin/pages/Tin';
+import Copper200 from './copper/pages/Copper200';
+import Cu200Pure from './copper/pages/Cu200Pure';
 import Copper01 from './copper/pages/Copper01';
 import Copper05 from './copper/pages/Copper05'
 import CuChemX from './copper/pages/CuChemX';
 import SN_NEXX from './tin/pages/SN_NEXX';
-import Copper200 from './copper/pages/Copper200';
-import Cu200Pure from './copper/pages/Cu200Pure';
+
 // import ListCopper01 from './copper/pages/ListCopper01';
 
 function App() {
