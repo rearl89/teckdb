@@ -209,6 +209,12 @@ input {
   margin-bottom: -30px;
 }
 
+.cu09DHFormGrid {
+  display: grid;
+  grid-template-columns: repeat(23, 8%);
+  margin-bottom: -30px;
+}
+
 .cu200Form {
   background: #fff;
   border-radius: 4px;
@@ -429,7 +435,7 @@ input::placeholder {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
+  z-index: 2000;
   color: var(--error);
   background: rgba(202, 202, 202, 0.66);
   border-radius: 16px;
@@ -520,6 +526,48 @@ input::placeholder {
 .cu05AnodeDetails P {
   display: grid;
   grid-template-columns: repeat(2, 50px) 60px repeat(27, 50px);
+  grid-gap: 1rem;
+  margin: 0;
+  font-size: 1vw;
+  color: #000000;
+  padding-top: 10px;
+  padding-bottom: 5px; 
+}
+
+.cu09DHColumns {
+  display: grid;
+  grid-template-columns: repeat(2, 50px) 60px repeat(38, 50px);
+  grid-gap: 1rem;
+  padding-left: 20px;
+  background: rgba(202, 202, 202, 0.66);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: fit-content;
+  padding-right: 22px;
+  z-index: 1000;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.cu09DHAnodeDetails {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: fit-content;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  background: rgba(202, 202, 202, 0.66);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(202, 202, 202, 1);
+}
+
+.cu09DHAnodeDetails p {
+  display: grid;
+  grid-template-columns: repeat(2, 50px) 60px repeat(38, 50px);
   grid-gap: 1rem;
   margin: 0;
   font-size: 1vw;

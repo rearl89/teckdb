@@ -58,23 +58,9 @@ const SnNexxEditModal = ({ sn_nexx, closeModal }) => {
         <div className="modal-scrollable">
           <h2>Edit Sn Nexx</h2>
           <label>
-            Batch ID:
-            <input
-              type="number"
-              name="batchID"
-              value={editedData.batchID}
-              onChange={handleChange}
-            />
+            <strong>Batch ID: {sn_nexx.batchID} &emsp;&emsp;&emsp;&emsp; Set #: {sn_nexx.anode}</strong>
           </label>
-          <label>
-            Anode #:
-            <input
-              type="number"
-              name="anode"
-              value={editedData.anode}
-              onChange={handleChange}
-            />
-          </label>
+          <hr/>
           <label>
             Weight:
             <input

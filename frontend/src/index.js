@@ -7,6 +7,7 @@ import { Copper200ContextProvider } from './copper/context/Copper200Context';
 import { Cu200PureContextProvider } from './copper/context/Cu200PureContext';
 import { Copper01ContextProvider } from './copper/context/Copper01Context';
 import { Copper05ContextProvider } from './copper/context/Copper05Context';
+import { Copper09DHContextProvider } from './copper/context/Copper09DHContext';
 import { CuChemXContextProvider } from './copper/context/CuChemXContext';
 import { SnNexxContextProvider } from './tin/context/SnNexxContext';
 
@@ -18,6 +19,7 @@ const contextProviders = [
   Cu200PureContextProvider,
   Copper01ContextProvider,
   Copper05ContextProvider,
+  Copper09DHContextProvider,
   CuChemXContextProvider,
   SnNexxContextProvider
 ];

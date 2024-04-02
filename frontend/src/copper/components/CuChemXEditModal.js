@@ -58,23 +58,9 @@ const CuChemXEditModal = ({ cuChemX, closeModal }) => {
         <div className="modal-scrollable">
           <h2>Edit Cu ChemX</h2>
           <label>
-            Batch ID:
-            <input
-              type="text"
-              name="batchID"
-              value={editedData.batchID}
-              onChange={handleChange}
-            />
+            <strong>Batch ID: {cuChemX.batchID} &emsp;&emsp;&emsp;&emsp; Set #: {cuChemX.anode}</strong>
           </label>
-          <label>
-            Anode #:
-            <input
-              type="text"
-              name="anode"
-              value={editedData.anode}
-              onChange={handleChange}
-            />
-          </label>
+          <hr/>
           <label>
             Weight:
             <input
