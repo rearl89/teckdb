@@ -375,3 +375,16 @@ form button {
   .acm:hover {
     transform: scale(1.2);
   }
+
+
+  /* delete confirmation buttons */
+  .delete-confirmation-content span {
+    padding: 10px 20px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+  }

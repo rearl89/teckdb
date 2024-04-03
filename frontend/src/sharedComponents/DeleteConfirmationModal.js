@@ -6,8 +6,9 @@ const DeleteConfirmationModal = ({ batchID, handleDeleteConfirm, handleCancelDel
             <div className="delete-confirmation-content">
                 Are you sure you want to delete <strong>{batchID}</strong>?
                 <br/>
-                <button onClick={handleDeleteConfirm}>Yes</button>
-                <button onClick={handleCancelDelete}>No</button>
+                <br/>
+                <span onClick={handleDeleteConfirm}>Yes</span>
+                <span onClick={handleCancelDelete}>No</span>
             </div>
         </div>
     );

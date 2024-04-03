@@ -1,7 +1,8 @@
-import { useState } from "react"
-import { useCopper200Context } from "../hooks/useCopper200Context"
-import Copper200EditModal from "./Copper200EditModal"
-import format from 'date-fns/format'
+import { useState } from "react";
+import { useCopper200Context } from "../hooks/useCopper200Context";
+import DeleteConfirmationModal from "../../sharedComponents/DeleteConfirmationModal";
+import Copper200EditModal from "./Copper200EditModal";
+import format from 'date-fns/format';
 
 const Copper200Details = ({copper200}) => {
 
@@ -80,20 +81,16 @@ const Copper200Details = ({copper200}) => {
 
             {/* Delete confirmation dialog */}
             {showDeleteConfirmation && (
-                <div className="delete-confirmation">
-                    <p style={{fontSize: '1.2rem', color: 'red'}}>Are you sure you want to delete this entry?</p>
-                    <button onClick={handleDeleteConfirm}>Delete</button>
-                    <button onClick={handleCancelDelete}>Cancel</button>
-                </div>
+                <DeleteConfirmationModal
+                    batchID={copper200.batchID}
+                    handleDeleteConfirm={handleDeleteConfirm}
+                    handleCancelDelete={handleCancelDelete}
+                />
             )}
-
             {/* modal code */}
             
             {isModalOpen && (
-                <Copper200EditModal
-                    copper200={copper200}
-                    closeModal={closeModal}
-                />
+                <Copper200EditModal copper200={copper200} closeModal={closeModal} />
             )}
         </div>
     )
