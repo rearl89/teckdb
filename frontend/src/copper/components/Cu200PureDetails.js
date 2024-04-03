@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useCu200PureContext } from "../hooks/useCu200PureContext"
+import DeleteConfirmationModal from "../../sharedComponents/DeleteConfirmationModal";
 import Cu200PureEditModal from "./Cu200PureEditModal"
 import format from 'date-fns/format'
 
@@ -80,11 +81,11 @@ const Cu200PureDetails = ({cu200Pure}) => {
 
             {/* Delete confirmation dialog */}
             {showDeleteConfirmation && (
-                <div className="delete-confirmation">
-                    <p style={{fontSize: '1.2rem', color: 'red'}}>Are you sure you want to delete this entry?</p>
-                    <button onClick={handleDeleteConfirm}>Delete</button>
-                    <button onClick={handleCancelDelete}>Cancel</button>
-                </div>
+                <DeleteConfirmationModal
+                    batchID={cu200Pure.batchID}
+                    handleDeleteConfirm={handleDeleteConfirm}
+                    handleCancelDelete={handleCancelDelete}
+                />
             )}
 
             {/* modal code */}

@@ -1,7 +1,8 @@
-import { useState } from "react"
-import { useCopper01Context } from "../hooks/useCopper01Context"
-import Copper01EditModal from "./Copper01EditModal"
-import format from 'date-fns/format'
+import { useState } from "react";
+import { useCopper01Context } from "../hooks/useCopper01Context";
+import DeleteConfirmationModal from "../../sharedComponents/DeleteConfirmationModal";
+import Copper01EditModal from "./Copper01EditModal";
+import format from 'date-fns/format';
 
 const Copper01Details = ({copper01}) => {
 
@@ -96,19 +97,16 @@ const Copper01Details = ({copper01}) => {
                 <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
             </div>
 
-            
-
             {/* Delete confirmation dialog */}
             {showDeleteConfirmation && (
-                <div className="delete-confirmation">
-                    <p style={{fontSize: '1.2rem', color: 'red'}}>Are you sure you want to delete this entry?</p>
-                    <button onClick={handleDeleteConfirm}>Delete</button>
-                    <button onClick={handleCancelDelete}>Cancel</button>
-                </div>
+                <DeleteConfirmationModal
+                    batchID={copper01.batchID}
+                    handleDeleteConfirm={handleDeleteConfirm}
+                    handleCancelDelete={handleCancelDelete}
+                />
             )}
 
             {/* modal code */}
-            
             {isModalOpen && (
                 <Copper01EditModal
                     copper01={copper01}

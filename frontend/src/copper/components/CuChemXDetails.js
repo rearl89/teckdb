@@ -60,8 +60,6 @@ const CuChemXDetails = ({cuChemX}) => {
                     <span className="material-symbols-outlined" onClick={handleDeleteClick}>delete</span>
                 </div>
 
-            
-
             {/* Delete confirmation dialog */}
             {showDeleteConfirmation && (
                 <DeleteConfirmationModal
@@ -72,15 +70,12 @@ const CuChemXDetails = ({cuChemX}) => {
             )}
             
             {/* modal code */}
-            
             {isModalOpen && (
                 <CuChemXEditModal
                     cuChemX={cuChemX}
                     closeModal={closeModal}
                 />
             )}
-            
-            
         </div>
     )
 }

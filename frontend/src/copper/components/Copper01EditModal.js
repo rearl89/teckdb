@@ -418,8 +418,8 @@ const Copper01EditModal = ({ copper01, closeModal }) => {
           <br/>
           <br/>
           <div className="modal-footer2">
-            <button className="modal-button" onClick={handleSave}>Save</button>
-            <button className="modal-button" onClick={handleCancel}>Close</button>
+            <span className="modal-button" onClick={handleSave}>Save</span>
+            <span className="modal-button" onClick={handleCancel}>Close</span>
           </div>
         </div>
       </div>

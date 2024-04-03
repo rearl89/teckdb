@@ -369,19 +369,6 @@ input::placeholder {
   justify-content: space-between;
 }
 
-.modal-footer2 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #fff; /* Background for the footer */
-  padding: 10px;
-  padding-bottom: 10%;
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-}
-
 /* Anode details for Cu and Sn ChemX only */
 .anode-details2 {
   padding-left: 20px;

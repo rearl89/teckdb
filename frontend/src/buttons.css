@@ -28,7 +28,7 @@ form button {
     color: #333;
   }
 
-  .delete-confirmation-modal button {
+  /* .delete-confirmation-modal button {
     padding: 10px 20px;
     background: var(--primary);
     color: #fff;
@@ -37,7 +37,7 @@ form button {
     cursor: pointer;
     margin-right: 10px;
     margin-top: 20px;
-  }
+  } */
 
   .edit-button {
     background: var(--primary);
