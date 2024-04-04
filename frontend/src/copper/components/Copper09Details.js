@@ -45,7 +45,7 @@ const Copper09Details = ({copper09}) => {
 
     return (
         <div>
-            <div className="cu09AnodeDetails">
+            <div className="cu09DHAnodeDetails">
                 <p>
                     <div>{copper09.batchID}</div>
                     <div>{copper09.set}</div>
