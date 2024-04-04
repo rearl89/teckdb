@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useCopper09DHContext } from "../hooks/useCopper09DHContext";
-// import { Link } from "react-router-dom";
 
 import Navbar from "../../homePage/Navbar";
 import Copper09DHDetails from '../components/Copper09DHDetails';
