@@ -10,6 +10,7 @@ import { Copper05ContextProvider } from './copper/context/Copper05Context';
 import { Copper09ContextProvider } from './copper/context/Copper09Context';
 import { Copper09DHContextProvider } from './copper/context/Copper09DHContext';
 import { CuChemXContextProvider } from './copper/context/CuChemXContext';
+import { CuEbaraContextProvider } from './copper/context/CuEbaraContext';
 import { SnNexxContextProvider } from './tin/context/SnNexxContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,6 +24,7 @@ const contextProviders = [
   Copper09ContextProvider,
   Copper09DHContextProvider,
   CuChemXContextProvider,
+  CuEbaraContextProvider,
   SnNexxContextProvider
 ];
 

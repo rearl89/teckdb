@@ -1,31 +1,31 @@
 import { useEffect } from "react";
-import { useCuChemXContext } from "../hooks/useCuChemXContext";
+import { useCuEbaraContext } from "../hooks/useCuEbaraContext";
 
 import Navbar from "../../homePage/Navbar";
-import CuChemXForm from "../components/CuChemXForm";
-import CuChemXDetails from "../components/CuChemXDetails";
+import CuEbaraForm from "../components/CuEbaraForm";
+import CuEbaraDetails from "../components/CuEbaraDetails";
 
 
-const CuChemX = () => {
-    const {cuChemXs, dispatch} = useCuChemXContext()
+const CuEbara = () => {
+    const {cuEbaras, dispatch} = useCuEbaraContext()
 
     useEffect(() => {
-        const fetchCuChemXs = async () => {
-            const response = await fetch('/cuChemX')
+        const fetchCuEbaras = async () => {
+            const response = await fetch('/cuEbara')
             const json = await response.json()
 
             if (response.ok) {
-                dispatch({type: 'SET_CUCHEMXS', payload: json})
+                dispatch({type: 'SET_CUEbaraS', payload: json})
             }
         }
         
-        fetchCuChemXs()
+        fetchCuEbaras()
     }, [dispatch])
 
     return (
         <div className="copper-background-fill">
             <Navbar />
-            <CuChemXForm />
+            <CuEbaraForm />
             <div className="cuChemXColumns">
                 <h5>Batch ID</h5>
                 <h5>Anode #</h5>
@@ -36,12 +36,12 @@ const CuChemX = () => {
                 <h5>Comment</h5>
             </div>
             <div className="cuChemXs">
-                {cuChemXs && cuChemXs.map(cuChemX => (
-                    <CuChemXDetails cuChemX={cuChemX} key={cuChemX._id} />
+                {cuEbaras && cuEbaras.map(cuEbara => (
+                    <CuEbaraDetails cuEbara={cuEbara} key={cuEbara._id} />
                 ))}
             </div> 
         </div>
     )
 }
 
-export default CuChemX
+export default CuEbara
