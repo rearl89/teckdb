@@ -13,6 +13,7 @@ import Copper09DH from './copper/pages/Copper09DH';
 import CuChemX from './copper/pages/CuChemX';
 import CuEbara from './copper/pages/CuEbara';
 import SN_NEXX from './tin/pages/SN_NEXX';
+import WEDGES from './tin/pages/Wedges';
 
 // import ListCopper01 from './copper/pages/ListCopper01';
 
@@ -34,6 +35,7 @@ function App() {
               <Route path="/cuChemX" element={<CuChemX />} />
               <Route path="/cu-ebara" element={<CuEbara />} />
               <Route path="/sn_nexx" element={<SN_NEXX />} />
+              <Route path='/lam-sn' element={<WEDGES />} />
               {/* <Route path="/copper01/list" element={<ListCopper01 />} /> */}
             </Routes>
           </div>
