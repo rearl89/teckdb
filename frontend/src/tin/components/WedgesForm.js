@@ -71,7 +71,7 @@ const WedgesForm = () => {
   };
 
   const inputRows = inputData.map((input, index) => (
-    <div className="chemXFormGrid" key={index}>
+    <div className="snWedgesInputGrid" key={index}>
       <input
         type="number"
         onChange={(e) => handleInputChange(e, index, 'batchID')}
@@ -146,7 +146,7 @@ const WedgesForm = () => {
   return (
     <form className="create" onSubmit={handleSubmit}>
       <div>
-        <h2 className="formHeader">Sn Wedges</h2>
+        <h2 className="formHeader">Sn Wedges (LAM)</h2>
         <label>How many sets are being tested?</label>
         <select value={selectedNumber} onChange={handleDropdownChange}>
           {Array.from({ length: 48 }, (_, index) => (
@@ -156,7 +156,7 @@ const WedgesForm = () => {
           ))}
         </select>
       </div>
-    <div className="snInputRows">
+    <div>
       {inputRows}
     </div>
       <button className="snSubmit">Submit</button>

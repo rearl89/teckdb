@@ -315,6 +315,14 @@ input::placeholder {
   background-color: lightgray;
 }
 
+.snWedgesInputGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 12%) 50%;
+  margin-top: -5px;
+  margin-bottom: -30px;
+  overflow-x: scroll;
+}
+
 .modal {
   display: flex;
   justify-content: center;
@@ -392,6 +400,48 @@ input::placeholder {
   color: #000000;
   padding-top: 10px;
   padding-bottom: 5px;
+}
+
+.snWedgesColumns {
+  display: grid;
+  grid-template-columns: repeat(11, 100px);
+  grid-gap: 1rem;
+  padding-left: 20px;
+  background: rgba(202, 202, 202, 0.66);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: fit-content;
+  padding-right: 22px;
+  z-index: 1000;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.snWedgesDetails {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  background: rgba(202, 202, 202, 0.66);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(202, 202, 202, 1);
+}
+
+.snWedgesDetails p {
+    display: grid;
+    grid-template-columns: repeat(11, 100px);
+    grid-gap: 1rem;
+    margin: 0;
+    font-size: 1vw;
+    color: #000000;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 /* Delete and edit buttons on the Cu and Sn ChemX pages */
