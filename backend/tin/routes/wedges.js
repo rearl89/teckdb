@@ -1,16 +1,16 @@
-const express = require('express')
-const { getWedgess, getWedges, createWedges, deleteWedges, updateWedges } = require('../controllers/wedgesController')
+const express = require('express');
+const { getWedgess, getWedges, createWedges, deleteWedges, updateWedges } = require('../controllers/wedgesController');
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/', getWedgess)
+router.get('/', getWedgess);
 
-router.get('/:id', getWedges)
+router.get('/:id', getWedges);
 
-router.post('/', createWedges)
+router.post('/', createWedges);
 
-router.delete('/:id', deleteWedges)
+router.delete('/:id', deleteWedges);
 
-router.patch('/:id', updateWedges)
+router.patch('/:id', updateWedges);
 
-module.exports = router
+module.exports = router;

@@ -28,7 +28,7 @@ const WEDGES = () => {
             <form className="overflow">
                 <WedgesTestHeadings />
                 {wedgess && wedgess.map(wedges => (
-                        <WedgesDetails sn_nexx={wedges} key={wedges._id} />
+                        <WedgesDetails wedges={wedges} key={wedges._id} />
                     ))}
             </form>
         </div>

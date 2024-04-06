@@ -149,7 +149,7 @@ const WedgesForm = () => {
         <h2 className="formHeader">Sn Wedges (LAM)</h2>
         <label>How many sets are being tested?</label>
         <select value={selectedNumber} onChange={handleDropdownChange}>
-          {Array.from({ length: 48 }, (_, index) => (
+          {Array.from({ length: 16 }, (_, index) => (
             <option key={index} value={index + 1}>
               {index + 1}
             </option>

@@ -56,7 +56,7 @@ const createWedges = async (req, res) => {
 
     try {
         const wedges = await Wedges.create({
-            batchID, weight, thickness, visualPass, comment
+            batchID, weight1, weight2, weight3, weight4, weight5, thickness, visualPass, comment
         })
         res.status(200).json(wedges)
     } catch (error) {

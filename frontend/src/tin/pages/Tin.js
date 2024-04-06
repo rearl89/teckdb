@@ -30,7 +30,7 @@ const Tin = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/lam-sn" className="lam-sn">
+                    <Link to="/wedges" className="lam-sn">
                         <div className="element">
                             <div className="square">
                                 <div className="label">
@@ -41,7 +41,7 @@ const Tin = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/lam-sn" className="acm">
+                    <Link to="/acm" className="acm">
                         <div className="element">
                             <div className="square">
                                 <div className="label">

@@ -35,7 +35,7 @@ function App() {
               <Route path="/cuChemX" element={<CuChemX />} />
               <Route path="/cu-ebara" element={<CuEbara />} />
               <Route path="/sn_nexx" element={<SN_NEXX />} />
-              <Route path='/lam-sn' element={<WEDGES />} />
+              <Route path='/wedges' element={<WEDGES />} />
               {/* <Route path="/copper01/list" element={<ListCopper01 />} /> */}
             </Routes>
           </div>
