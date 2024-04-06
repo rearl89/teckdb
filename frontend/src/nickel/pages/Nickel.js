@@ -8,7 +8,7 @@ const Nickel = () => {
             <div className="home">
                 <h2>Nickel</h2>
                 <div className="SnButtons">
-                    <Link to="/sn_nexx" className="SnNexx">
+                    <Link to="/ni200" className="SnNexx">
                         <div className="element">
                             <div className="square">
                                 <div className="label">

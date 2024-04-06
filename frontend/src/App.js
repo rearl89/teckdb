@@ -4,6 +4,7 @@ import Home from './homePage/Home';
 
 import Copper from './copper/pages/Copper';
 import Tin from './tin/pages/Tin';
+import Nickel from './nickel/pages/Nickel';
 import Copper200 from './copper/pages/Copper200';
 import Cu200Pure from './copper/pages/Cu200Pure';
 import Copper01 from './copper/pages/Copper01';
@@ -14,6 +15,7 @@ import CuChemX from './copper/pages/CuChemX';
 import CuEbara from './copper/pages/CuEbara';
 import SN_NEXX from './tin/pages/SN_NEXX';
 import WEDGES from './tin/pages/Wedges';
+import Ni200 from './nickel/pages/Ni200';
 
 // import ListCopper01 from './copper/pages/ListCopper01';
 
@@ -26,6 +28,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/copper" element={<Copper />} />
               <Route path="/tin" element={<Tin />} />
+              <Route path="/nickel" element={<Nickel />} />
               <Route path="/cup200-3" element={<Copper200 />} />
               <Route path="/cup200-3Pure" element={<Cu200Pure />} />
               <Route path="/copper01" element={<Copper01 />} />
@@ -36,6 +39,7 @@ function App() {
               <Route path="/cu-ebara" element={<CuEbara />} />
               <Route path="/sn_nexx" element={<SN_NEXX />} />
               <Route path='/wedges' element={<WEDGES />} />
+              <Route path='/ni200' element={<Ni200 />} />
               {/* <Route path="/copper01/list" element={<ListCopper01 />} /> */}
             </Routes>
           </div>

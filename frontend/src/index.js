@@ -13,6 +13,7 @@ import { CuChemXContextProvider } from './copper/context/CuChemXContext';
 import { CuEbaraContextProvider } from './copper/context/CuEbaraContext';
 import { SnNexxContextProvider } from './tin/context/SnNexxContext';
 import { WedgesContextProvider } from './tin/context/WedgesContext';
+import { Ni200ContextProvider } from './nickel/context/Ni200Context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -27,7 +28,8 @@ const contextProviders = [
   CuChemXContextProvider,
   CuEbaraContextProvider,
   SnNexxContextProvider,
-  WedgesContextProvider
+  WedgesContextProvider,
+  Ni200ContextProvider
 ];
 
 // Create a function to wrap the App component with each context provider
