@@ -8,7 +8,11 @@ const WedgesEditModal = ({ wedges, closeModal }) => {
   const [editedData, setEditedData] = useState({
     batchID: wedges.batchID,
     anode: wedges.anode,
-    weight: wedges.weight,
+    weight1: wedges.weight1,
+    weight2: wedges.weight2,
+    weight3: wedges.weight3,
+    weight4: wedges.weight4,
+    weight5: wedges.weight5,
     thickness: wedges.thickness,
     visualPass: wedges.visualPass,
     comment: wedges.comment,
@@ -136,8 +140,8 @@ const WedgesEditModal = ({ wedges, closeModal }) => {
           <br/>
           <br/>
           <div className="modal-footer">
-            <button className="modal-button" onClick={handleSave}>Save</button>
-            <button className="modal-button" onClick={handleCancel}>Close</button>
+            <span className="modal-button" onClick={handleSave}>Save</span>
+            <span className="modal-button" onClick={handleCancel}>Close</span>
           </div>
         </div>
       </div>

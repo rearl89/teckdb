@@ -45,7 +45,7 @@ const WedgesDetails = ({wedges}) => {
 
     return (
         <div>
-                <div className="anode-details2">
+                <div className="snWedgesDetails">
                     <p>
                         <div>{wedges.batchID}</div>
                         <div>{wedges.anode}</div>

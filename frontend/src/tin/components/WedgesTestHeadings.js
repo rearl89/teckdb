@@ -9,8 +9,8 @@ const WedgesTestHeadings = () => {
                 <h5>Wt 3</h5>
                 <h5>Wt 4</h5>
                 <h5>Wt 5</h5>
-                <h5>Thickness</h5>
-                <h5>Pass Visual?</h5>
+                <h5>Thick</h5>
+                <h5>Visual?</h5>
                 <h5>Comment</h5>
             </div>
     )
