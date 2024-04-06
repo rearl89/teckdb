@@ -12,6 +12,7 @@ const cuChemXRoutes = require('./copper/routes/cuChemX');
 const cuEbaraRoutes = require('./copper/routes/cuEbara');
 const sn_nexxRoutes = require('./tin/routes/sn_nexx');
 const wedgesRoutes = require('./tin/routes/wedges');
+const ni200Routes = require('./nickel/routes/ni200');
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use('/cuChemX', cuChemXRoutes);
 app.use('/cuEbara', cuEbaraRoutes);
 app.use('/sn_nexx', sn_nexxRoutes);
 app.use('/wedges', wedgesRoutes);
+app.use('/ni200', ni200Routes);
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
