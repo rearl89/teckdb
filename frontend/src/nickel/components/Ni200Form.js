@@ -75,7 +75,7 @@ const Ni200Form = () => {
   };
 
   const inputRows = inputData.map((input, index) => (
-    <div className="ni200FormGrid" key={index}>
+    <div className="cu200FormGrid" key={index}>
       <input
         type="text"
         onChange={(e) => handleInputChange(e, index, "batchID")}
@@ -164,7 +164,7 @@ const Ni200Form = () => {
   ));
 
   return (
-    <form className="ni200Form" onSubmit={handleSubmit}>
+    <form className="cu200Form" onSubmit={handleSubmit}>
       <div className="formHeader">
         <h2>3-200 Ni</h2>
       </div>

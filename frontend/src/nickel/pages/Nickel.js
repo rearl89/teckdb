@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Nickel = () => {
     return (
-        <div className="tin-background">
+        <div className="ni-background">
             <Navbar />
             <div className="home">
                 <h2>Nickel</h2>

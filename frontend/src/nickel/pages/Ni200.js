@@ -24,7 +24,7 @@ const Ni200 = () => {
     }, [dispatch])
 
     return (
-        <div className="nickel-background-fill">
+        <div className="ni-background-fill">
             <Navbar />
             <Ni200Form />
             <form className="overflow">

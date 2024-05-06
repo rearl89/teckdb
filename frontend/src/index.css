@@ -120,6 +120,24 @@ header a {
   background-attachment: fixed;
 }
 
+.ni-background {
+  background-image: url("./images/ni-background.jpeg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+.ni-background-fill {
+  background-image: url("./images/ni-background.jpeg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .home h2 {
   margin: 0 0 20px;
   text-align: center;

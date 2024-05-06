@@ -45,7 +45,7 @@ const Ni200Details = ({ni200}) => {
 
     return (
         <div>
-            <div className="ni200AnodeDetails">
+            <div className="cu200AnodeDetails">
                 <p>
                     <div>{ni200.batchID}</div>
                     <div>{ni200.set}</div>
