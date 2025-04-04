@@ -37,6 +37,10 @@ app.use("/sn_nexx", sn_nexxRoutes);
 app.use("/wedges", wedgesRoutes);
 app.use("/ni200", ni200Routes);
 
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to the API" });
+});
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
