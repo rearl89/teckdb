@@ -4,6 +4,7 @@ process.noDeprecation = true;
 
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const copper200Routes = require("./copper/routes/copper200");
 const cu200PureRoutes = require("./copper/routes/cu200Pure");
 const copper01Routes = require("./copper/routes/copper01");
@@ -18,6 +19,7 @@ const ni200Routes = require("./nickel/routes/ni200");
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.use((req, res, next) => {
