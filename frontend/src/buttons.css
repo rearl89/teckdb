@@ -92,11 +92,12 @@ form button {
 
 /* Details on buttons on the home page */
 .homeButtons {
-    width: 350px;
+    width: 90%;  /* Instead of fixed 350px */
+    max-width: 600px; /* Reduced from 800px */
     margin: 0 auto;
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: auto auto auto auto;
+    grid-gap: 0.5rem;  /* Reduced from 1rem */
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); /* Reduced from 150px */
   }
   
   .CuButtons {
@@ -125,7 +126,7 @@ form button {
   
   .element {
     position: relative;
-    font-size: 0.5vw;
+    font-size: 12px;  /* Reduced from 16px */
     padding-bottom: 100%;
     cursor: pointer;
     color: #fff;
@@ -144,10 +145,11 @@ form button {
   }
   
   .element .atomic-number {
+    font-size: 0.8em;  /* Reduced from 0.9em */
     position: absolute;
     left: 0;
     top: 0;
-    padding: 2px;
+    padding: 0.2em;  /* Reduced from 0.3em */
   }
   
   .element .label {
@@ -156,19 +158,20 @@ form button {
   }
   
   .element .symbol {
-    font-size: 1.7vw;
+    font-size: 1.5em;  /* Reduced from 2em */
   }
   
   .element .name {
-    font-size: 0.7vw;
+    font-size: 0.9em;  /* Reduced from 1em */
   }
   
   .element .atomic-mass {
+    font-size: 0.7em;  /* Reduced from 0.8em */
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 2px;
+    padding: 0.2em;  /* Reduced from 0.3em */
     text-align: center;
   }
   
@@ -388,3 +391,29 @@ form button {
     margin-right: 10px;
     margin-top: 20px;
   }
+
+/* Add media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+    .homeButtons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .element {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .homeButtons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .element {
+        font-size: 9px;
+    }
+}
+
+/* For larger screens */
+@media screen and (min-width: 1440px) {
+    .element {
+        font-size: 14px; /* Reduced from 18px */
+    }
+}
