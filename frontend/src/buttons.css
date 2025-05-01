@@ -100,13 +100,14 @@ form button {
     grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); /* Reduced from 150px */
   }
   
-  .CuButtons {
-    width: 350px;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: auto auto auto auto;
-  }
+ .CuButtons {
+   width: 90%;
+   max-width: 600px;
+   margin: 0 auto;
+   display: grid;
+   grid-gap: 0.5rem;
+   grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+ }
   
   .CuNumber {
     position: absolute;

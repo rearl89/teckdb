@@ -41,14 +41,16 @@ header a {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(202, 202, 202, 1);
 
-  margin: 40px auto;
-  padding: 20px;
-  width: 45%;
-  left: 25%;
-  display: inline-block;
+  /* Update these properties */
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-  height: 300px;
 }
 
 .cuHome {
@@ -59,15 +61,15 @@ header a {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(202, 202, 202, 1);
 
-  margin: 40px auto;
-  padding: 20px;
-  width: 45%;
-  left: 25%;
-  display: inline-block;
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-  margin-left: 30px;
-  height: 60%;
 }
 
 .cuHome h2 {
@@ -139,8 +141,9 @@ header a {
 }
 
 .home h2 {
-  margin: 0 0 20px;
+  margin: 0 0 2rem;
   text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
 .anode-details {
@@ -674,4 +677,35 @@ input::placeholder {
   padding-top: 10px;
   padding-bottom: 5px; 
 }
+
+/* Update media queries */
+@media screen and (max-width: 768px) {
+  .home {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  .cuHome {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  .CuButtons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home {
+    width: 98%;
+    padding: 1rem;
+  }
+  .cuHome {
+    width: 98%;
+    padding: 1rem;
+  }
+  .CuButtons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 
